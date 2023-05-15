@@ -4,8 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/Ark-Portfolio/',
   server: {
     port: 3000,
+  },
+  build: {
+    outDir: './Ark-Portfolio'
   },
 })

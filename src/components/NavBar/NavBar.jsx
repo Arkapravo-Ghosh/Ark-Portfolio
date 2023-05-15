@@ -60,7 +60,7 @@ export default function NavBar() {
       <AnimatePresence>
         <div className="navbar">
           <div className="logo">
-            <NavLink to="/">
+            <NavLink to="/Ark-Portfolio/">
               <motion.img
                 height="30x"
                 width="30px"
@@ -74,20 +74,20 @@ export default function NavBar() {
           <div className="list">
             <ul>
               <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/Ark-Portfolio/">Home</NavLink>
               </motion.li>
               <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/Ark-Portfolio/about">About</NavLink>
               </motion.li>
               <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/portfolio">Portfolio</NavLink>
+                <NavLink to="/Ark-Portfolio/portfolio">Portfolio</NavLink>
               </motion.li>
               <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/Ark-Portfolio/contact">Contact</NavLink>
               </motion.li>
             </ul>
           </div>
-          <NavLink to="/">
+          <NavLink to="/Ark-Portfolio/">
             <motion.div className='heading'>
               Ark Site
             </motion.div>
@@ -110,16 +110,16 @@ export default function NavBar() {
                   animate="finished"
                 >
                   <motion.li variants={sidebar_item}>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/Ark-Portfolio/">Home</NavLink>
                   </motion.li>
                   <motion.li variants={sidebar_item}>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/Ark-Portfolio/about">About</NavLink>
                   </motion.li>
                   <motion.li variants={sidebar_item}>
-                    <NavLink to="/portfolio">Portfolio</NavLink>
+                    <NavLink to="/Ark-Portfolio/portfolio">Portfolio</NavLink>
                   </motion.li>
                   <motion.li variants={sidebar_item}>
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="/Ark-Portfolio/contact">Contact</NavLink>
                   </motion.li>
                 </motion.ul>
               </AnimatePresence>

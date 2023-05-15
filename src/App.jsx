@@ -16,11 +16,11 @@ ReactGA.initialize(TRACKING_ID);
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<NavBar />}>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/contact" element={<Contact />} />
+    <Route path="/Ark-Portfolio" element={<NavBar />}>
+      <Route path="/Ark-Portfolio" element={<Home />} />
+      <Route path="/Ark-Portfolio/about" element={<About />} />
+      <Route path="/Ark-Portfolio/portfolio" element={<Portfolio />} />
+      <Route path="/Ark-Portfolio/contact" element={<Contact />} />
     </Route>
   )
 );
