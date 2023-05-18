@@ -2,7 +2,7 @@
 ![work-in-progress](https://img.shields.io/badge/Work%20In%20Progress-90ee90.svg)\
 [![CodeQL](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql)
 [![pages-build-deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment)
-> Check out the site at [https://arkapravoghosh1.tildevarsh.in](https://arkapravoghosh1.tildevarsh.in)
+> Check out the site at [https://arkapravo-ghosh.github.io/Ark-Portfolio](https://arkapravo-ghosh.github.io/Ark-Portfolio)
 
 # Build the project
 
