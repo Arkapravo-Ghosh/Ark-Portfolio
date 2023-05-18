@@ -1,5 +1,9 @@
-![work-in-progress](https://img.shields.io/badge/Work%20In%20Progress-90ee90.svg)\
-![README Card](https://github-readme-stats.vercel.app/api/pin/?username=Arkapravo-Ghosh&repo=Ark-Portfolio&show_owner=true&theme=react&hide_border=true)\
+![work-in-progress](https://img.shields.io/badge/Work%20In%20Progress-90ee90.svg)
+# Arkapravo Ghosh's Portfolio Website
+![GitHub license](https://img.shields.io/github/license/Arkapravo-Ghosh/Ark-Portfolio)
+![GitHub lines of code](https://img.shields.io/tokei/lines/github/Arkapravo-Ghosh/Ark-Portfolio)
+![GitHub repo size](https://img.shields.io/github/repo-size/Arkapravo-Ghosh/Ark-Portfolio)
+![GitHub last commit](https://img.shields.io/github/last-commit/Arkapravo-Ghosh/Ark-Portfolio)\
 [![CodeQL](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql)
 [![pages-build-deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment)
 > Check out the site at [https://arkapravo-ghosh.github.io/Ark-Portfolio](https://arkapravo-ghosh.github.io/Ark-Portfolio)
