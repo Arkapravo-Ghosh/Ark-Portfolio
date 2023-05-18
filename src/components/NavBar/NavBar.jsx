@@ -36,7 +36,7 @@ const sidebar = {
   start: {},
   finished: {
     transition: {
-      delayChildren: 0.1,
+      delayChildren: 0.2,
       staggerChildren: 0.1,
     },
   },
@@ -99,9 +99,9 @@ export default function NavBar() {
               transition={{ type: "tween" }}
               className="sidebar"
               onClick={() => setShowSidebar(false)}
-              initial={{ x: "-60vw" }}
+              initial={{ x: "-500px" }}
               animate={{ x: 0 }}
-              exit={{ x: "-60vw" }}
+              exit={{ x: "-500px" }}
             >
               <AnimatePresence>
                 <motion.ul
