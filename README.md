@@ -1,5 +1,5 @@
-# This is my Portfolio website
 ![work-in-progress](https://img.shields.io/badge/Work%20In%20Progress-90ee90.svg)\
+![README Card](https://github-readme-stats.vercel.app/api/pin/?username=Arkapravo-Ghosh&repo=Ark-Portfolio&show_owner=true&theme=react&hide_border=true&border_radius=5&bg_color=00000000&hide_lang=true)\
 [![CodeQL](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql)
 [![pages-build-deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment)
 > Check out the site at [https://arkapravo-ghosh.github.io/Ark-Portfolio](https://arkapravo-ghosh.github.io/Ark-Portfolio)
