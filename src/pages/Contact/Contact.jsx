@@ -3,6 +3,11 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <div className="Contact">
+      <div className="progress">
+        <p>
+          Development Still on Progress
+        </p>
+      </div>
       <div className="Contact-Header">
         <h1>Contact Me</h1>
       </div>

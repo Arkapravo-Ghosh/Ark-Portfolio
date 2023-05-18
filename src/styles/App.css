@@ -11,3 +11,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.progress {
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  left: calc(50vw - 92px);
+  z-index: 2;
+  font-size: 14px;
+  color: #ffffff00;
+}
+
+.progress p {
+  background: -webkit-linear-gradient(45deg, #ff0000df, #ff7300df, #fffb00df, #48ff00df, #00ffd5df, #002bffdf, #7a00ffdf, #ff00c8df, #ff0000df, #ff7300df);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowing 100s linear infinite;
+}
