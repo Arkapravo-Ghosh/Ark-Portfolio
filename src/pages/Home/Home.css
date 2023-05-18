@@ -234,6 +234,11 @@
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        overflow-y: hidden;
+    }
+
     .Home-Main {
         padding-left: unset;
     }
