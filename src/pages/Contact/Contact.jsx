@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import "./Contact.css";
 export default function Contact() {
+  function form_submit(event) {
+    event.preventDefault()
+    var form = document.getElementById("contact-form")
+    var user_name = form.elements["user_name"].value
+    var user_email = form.elements["user_email"].value
+    var message = form.elements["message"].value
+    // We will make a POST request here later
+    form.reset();
+  }
   return (
     <div className="Contact">
       <div className="progress">
@@ -29,7 +38,7 @@ export default function Contact() {
         </div>
         <div className="Contact-Body-Right">
           <h2>Get in Touch</h2>
-          <form id="contact-form">
+          <form id="contact-form" onSubmit={form_submit}>
             <input type="hidden" name="contact_number" />
             <input type="text" placeholder="Name" name="user_name" />
             <input type="email" placeholder="Email" name="user_email" />
