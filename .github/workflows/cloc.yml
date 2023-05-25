@@ -1,9 +1,7 @@
 name: Badge Creation
-
 on:
   push:
     branches: [ main ]
-
 jobs:
   update-badges:
     name: Update Badges
