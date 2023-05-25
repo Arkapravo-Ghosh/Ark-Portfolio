@@ -97,6 +97,7 @@ textarea {
     -ms-overflow-style: none;
     scrollbar-width: none;
     height: 70px;
+    padding: 5px 10px;
 }
 
 .Contact-Body-Right form textarea::-webkit-scrollbar {
