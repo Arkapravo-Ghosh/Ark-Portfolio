@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import './styles/App.css';
-import { AnimatePresence, motion } from 'framer-motion';
 // import AnimatedCursor from 'react-animated-cursor';
 import ReactGA from 'react-ga4';
 import NavBar from './components/NavBar/NavBar';

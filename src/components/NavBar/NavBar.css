@@ -159,7 +159,7 @@
 
     .sidebar {
         display: unset;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0px;
         height: 100vh;

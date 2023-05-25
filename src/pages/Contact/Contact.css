@@ -16,13 +16,13 @@
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    overflow-x: hidden;
 }
 
 .Contact-Body-Left {
-    width: 50%;
+    width: calc(50% - 200px);
     display: flex;
     flex-direction: column;
-    padding-left: 20vw;
 }
 
 .Contact-Body-Left a {
@@ -36,7 +36,94 @@
 */
 
 .Contact-Body-Right {
-    width: 50%;
+    width: calc(50% - 200px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.Contact-Body-Right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Contact-Body-Right form input, textarea {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+    border: 1.5px solid #00fbff;
+    background-color: #131313;
+    color: #fff;
+}
+
+.Contact-Body-Right form textarea {
+    resize: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 70px;
+}
+
+.Contact-Body-Right form textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.Contact-Body-Right form input:focus, textarea:focus {
+    border: 1.5px solid #00a2ff;
+}
+
+.Contact-Body-Right form input::placeholder, textarea::placeholder {
+    color: #d2d2d2;
+}
+
+.Contact-Body-Right .button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #272727;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.Contact-Body-Right .button:hover {
+    transform: scale(1.02);
+    background-color: #00fbff;
+    color: #000000;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .Contact-Body {
+        flex-direction: column;
+        padding-bottom: 120px;
+    }
+
+    .Contact-Body-Left {
+        width: 100%;
+        padding: 0 50px;
+    }
+
+    .Contact-Body-Right {
+        padding-top: 10px;
+        width: 100%;
+        align-items: unset;
+    }
+
+    .Contact-Body-Right h2 {
+        text-align: center;
+    }
 }

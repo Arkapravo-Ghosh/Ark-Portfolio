@@ -29,6 +29,13 @@ export default function Contact() {
         </div>
         <div className="Contact-Body-Right">
           <h2>Get in Touch</h2>
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <input type="text" placeholder="Name" name="user_name" />
+            <input type="email" placeholder="Email" name="user_email" />
+            <textarea placeholder="Message" name="message" />
+            <input class="button" type="submit" value="Send" />
+          </form>
         </div>
       </div>
     </div>
