@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import bg from "../../assets/bg.jpg";
 export default function Contact() {
   function form_submit(event) {
     event.preventDefault()
