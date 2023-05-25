@@ -1,5 +1,6 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .bg {
@@ -36,6 +37,7 @@ body {
     justify-content: center;
     padding: 10px 0;
     overflow-x: hidden;
+    overflow-y: scroll;
     padding-top: 100px;
     gap: 100px;
 }
