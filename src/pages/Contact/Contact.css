@@ -1,3 +1,18 @@
+.bg {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url("../../assets/bg.jpg");
+    filter: invert(1) grayscale(1) contrast(0.9) brightness(0.99) blur(10px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .Contact {
     display: flex;
     flex-direction: column;
@@ -17,12 +32,17 @@
     justify-content: center;
     padding: 10px 0;
     overflow-x: hidden;
+    padding-top: 100px;
+    gap: 100px;
 }
 
 .Contact-Body-Left {
     width: calc(50% - 200px);
     display: flex;
     flex-direction: column;
+    font-size: large;
+    align-self: top;
+    gap: 5px;
 }
 
 .Contact-Body-Left a {
@@ -39,8 +59,9 @@
     width: calc(50% - 200px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    font-size: large;
+    align-self: top;
 }
 
 .Contact-Body-Right form {
@@ -52,11 +73,11 @@
     gap: 10px;
 }
 
-.Contact-Body-Right form input, textarea {
-    width: 200px;
+.Contact-Body-Right form input,
+textarea {
+    width: 300px;
     height: 30px;
     border: none;
-    border-radius: 5px;
     padding: 0 10px;
     outline: none;
     border: 1.5px solid #00fbff;
@@ -76,11 +97,13 @@
     display: none;
 }
 
-.Contact-Body-Right form input:focus, textarea:focus {
+.Contact-Body-Right form input:focus,
+textarea:focus {
     border: 1.5px solid #00a2ff;
 }
 
-.Contact-Body-Right form input::placeholder, textarea::placeholder {
+.Contact-Body-Right form input::placeholder,
+textarea::placeholder {
     color: #d2d2d2;
 }
 
@@ -88,9 +111,8 @@
     width: 100px;
     height: 30px;
     border: none;
-    border-radius: 5px;
     outline: none;
-    background-color: #272727;
+    background-color: #404040;
     color: #ffffff;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -111,20 +133,45 @@
     .Contact-Body {
         flex-direction: column;
         padding-bottom: 120px;
+        padding-top: unset;
+        justify-content: unset;
+        gap: 10px;
     }
 
     .Contact-Body-Left {
         width: 100%;
-        padding: 0 50px;
+        padding: 0 100px;
+        font-size: unset;
     }
 
     .Contact-Body-Right {
         padding-top: 10px;
         width: 100%;
         align-items: unset;
+        font-size: unset;
     }
 
     .Contact-Body-Right h2 {
         text-align: center;
+    }
+
+    .Contact-Body-Right form {
+        gap: 20px;
+    }
+
+    .Contact-Body-Right form input,
+    textarea {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Contact-Body-Left {
+        padding: 0 50px;
+    }
+
+    .Contact-Body-Right form input,
+    textarea {
+        width: 250px;
     }
 }
