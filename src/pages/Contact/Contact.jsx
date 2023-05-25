@@ -3,20 +3,16 @@ import "./Contact.css";
 export default function Contact() {
   function form_submit(event) {
     event.preventDefault()
-    var form = document.getElementById("contact-form")
-    var user_name = form.elements["user_name"].value
-    var user_email = form.elements["user_email"].value
-    var message = form.elements["message"].value
-    // We will make a POST request here later
+    const mail = "arkapravoghosh99@gmail.com"
+    const form = document.getElementById("contact-form")
+    const user_name = form.elements["user_name"].value
+    const user_email = form.elements["user_email"].value
+    const message = form.elements["message"].value
+    window.open(`mailto:${mail}?subject=Message from ${user_name} (${user_email})&body=${message}`)
     form.reset();
   }
   return (
     <div className="Contact">
-      <div className="progress">
-        <p>
-          Development Still on Progress
-        </p>
-      </div>
       <div className="Contact-Header">
         <h1>Contact Me</h1>
       </div>
