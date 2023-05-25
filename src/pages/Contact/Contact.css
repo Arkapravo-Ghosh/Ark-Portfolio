@@ -62,6 +62,7 @@
     border: 1.5px solid #00fbff;
     background-color: #131313;
     color: #fff;
+    transition: all 0.2s ease-in-out;
 }
 
 .Contact-Body-Right form textarea {
