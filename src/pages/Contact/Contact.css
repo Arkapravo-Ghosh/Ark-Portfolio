@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .bg {
     position: fixed;
     margin: 0;
