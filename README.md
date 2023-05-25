@@ -1,6 +1,7 @@
 ![work-in-progress](https://img.shields.io/badge/Work%20In%20Progress-90ee90.svg)
 # Arkapravo Ghosh's Portfolio Website
 ![GitHub license](https://img.shields.io/github/license/Arkapravo-Ghosh/Ark-Portfolio)
+![loc](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Arkapravo-Ghosh/9a1184af0894a8b86cc3fdf0c8f82195/raw/loc.json)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Arkapravo-Ghosh/Ark-Portfolio)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Arkapravo-Ghosh/Ark-Portfolio)\
 [![CodeQL](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql)
