@@ -19,8 +19,8 @@ jobs:
       - name: Create Lines-of-Code-Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
-          auth: ${{ vars.GIST_ID }}
-          gistID: ${{ secrets.BADGE_GIST_ID }}
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: ${{ vars.GIST_ID }}
           filename: loc.json
           label: Lines of Code
           message: ${{ env.CODE_LINES }}
