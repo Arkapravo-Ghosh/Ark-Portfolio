@@ -27,3 +27,4 @@ jobs:
           label: Lines of Code
           message: ${{ env.CODE_LINES }}
           color: blue
+          forceUpdate: true
