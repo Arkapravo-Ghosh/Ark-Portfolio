@@ -15,14 +15,9 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y cloc
-      - name: Check cloc version
-        run: cloc --version
-      - name: Print the current directory
-        run: pwd
       - name: Get the Numbers
         run: |
-          cloc --include-lang="JavaScript" --md . | awk -F'|' 'END { printf "%.1fk\n", $5/1000 }' | tr -d '\n'
-          echo CODE_LINES=$(cloc --include-lang="JavaScript" --md . | awk -F'|' 'END { printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
+          echo CODE_LINES=$(cloc . | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
       - name: Create Lines-of-Code-Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
