@@ -1,28 +1,13 @@
-name: Badges
+name: Count Lines of Code (cloc)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  update-badges:
-    name: Update Badges
+  cloc:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Download cloc
-        run: sudo apt-get update -y && sudo apt-get install -y cloc
-      - name: Get the Numbers
-        run: |
-          echo "CODE_LINES=$(./.misc/cloc.sh --loc)" >> $GITHUB_ENV && cat $GITHUB_ENV
-      - name: Create Lines-of-Code-Badge
-        uses: schneegans/dynamic-badges-action@v1.3.0
-        with:
-          auth: ${{ secrets.GIST_SECRET }}
-          gistID: 9a1184af0894a8b86cc3fdf0c8f82195
-          filename: loc.json
-          label: Lines of Code
-          message: ${{ env.CODE_LINES }}
-          color: lightgrey
+    - uses: actions/checkout@v3
+    - name: Count Lines of Code (cloc)
+      uses: djdefi/cloc-action@5
