@@ -17,7 +17,10 @@ jobs:
           sudo apt install -y cloc
       - name: Get the Numbers
         run: |
-          export CODE_LINES=$(./.misc/cloc.sh --loc)
+          echo CODE_LINES=$(./.misc/cloc.sh --loc) >> $GITHUB_ENV
+      - name: Print the numbers
+        run: |
+          echo ${{ env.CODE_LINES }}
       - name: Create Lines-of-Code-Badge
         uses: schneegans/dynamic-badges-action@v1.0.0
         with:
