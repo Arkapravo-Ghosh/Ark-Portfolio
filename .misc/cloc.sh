@@ -5,7 +5,7 @@ IFS='|' read -r -a TOKENS <<< "$SUMMARY"
 NUMBER_OF_FILES=${TOKENS[1]}
 COMMENT_LINES=${TOKENS[3]}
 LINES_OF_CODE=${TOKENS[4]}
-DUMB_COMMENTS="$(grep -r -E '//////|// -----' "${SCRIPT_DIR}" | wc -l)"
+DUMB_COMMENTS="$(grep -r -E '//////|// -----' "${SCRIPT_DIR}" 2>/dev/null | wc -l)"
 COMMENT_LINES=$(($COMMENT_LINES - 5 * $NUMBER_OF_FILES - $DUMB_COMMENTS))
 if [[ $# -eq 0 ]] ; then
   awk -v a=$LINES_OF_CODE \
