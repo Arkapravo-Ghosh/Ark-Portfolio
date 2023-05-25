@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR="$( cd "$( dirname "$0" )/../" && pwd )"
+SCRIPT_DIR="$( cd "$( dirname "$0" )/../.misc" && pwd )"
 SUMMARY="$(cloc "${SCRIPT_DIR}" --include-lang="JavaScript" --md | tail -1)"
 IFS='|' read -r -a TOKENS <<< "$SUMMARY"
 NUMBER_OF_FILES=${TOKENS[1]}
