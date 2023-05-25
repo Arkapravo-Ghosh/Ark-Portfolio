@@ -15,6 +15,10 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y cloc
+      - name: Check cloc version
+        run: cloc --version
+      - name: Print the current directory
+        run: pwd
       - name: Get the Numbers
         run: |
           cloc --include-lang="JavaScript" --md . | awk -F'|' 'END { printf "%.1fk\n", $5/1000 }' | tr -d '\n'
