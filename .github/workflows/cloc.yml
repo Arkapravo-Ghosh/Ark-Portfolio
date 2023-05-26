@@ -15,7 +15,7 @@ jobs:
           sudo apt install -y cloc
       - name: Get the Numbers
         run: |
-          echo CODE_LINES=$(cloc . | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
+          echo CODE_LINES=$(cloc . --exclude-list-file=.clocignore | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
       - name: Create Lines-of-Code-Badge
         uses: schneegans/dynamic-badges-action@v1.6.0
         with:
