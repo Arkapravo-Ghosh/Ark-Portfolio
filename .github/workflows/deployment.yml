@@ -1,4 +1,4 @@
-name: "main"
+name: "Deployment"
 on:
   push:
     branches: [ "main" ]
