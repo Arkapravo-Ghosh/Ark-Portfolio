@@ -139,6 +139,8 @@ body {
     white-space: nowrap;
     position: relative;
     transform: rotate(-90deg);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .Social-Links ul li {

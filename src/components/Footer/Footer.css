@@ -9,6 +9,8 @@ footer {
     height: 50px;
     font: 'Futura';
     font-size: 15px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .footer-copy {
@@ -35,9 +37,11 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
     .footer-copy {
         bottom: 40px;
     }
+
     .footer-author {
         bottom: 10px;
         right: unset;
