@@ -27,7 +27,7 @@ jobs:
           color: blue
           forceUpdate: true
   codeql-analysis:
-    name: Analyze
+    name: CodeQL Analysis
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     permissions:
       actions: read
