@@ -20,6 +20,8 @@ jobs:
           git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode | gpg --import
+          git config --global user.signingkey ${{ secrets.GPG_KEY_ID }}
+          git config --global commit.gpgsign true
       - name: Deploy to gh-pages
         run: |
           npm run deploy
