@@ -10,6 +10,12 @@
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: url('../assets/cursor/normal.png') 7 19, auto;
+}
+
+::selection {
+  background: rgb(39, 226, 255);
+  color: black;
 }
 
 :root {

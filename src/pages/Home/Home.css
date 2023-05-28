@@ -45,7 +45,6 @@ body {
     outline: none;
     color: #fff;
     background: #000000;
-    cursor: pointer;
     position: relative;
     z-index: 0;
     border: 1.5px solid #ffffff;
@@ -56,6 +55,7 @@ body {
     align-items: center;
     text-decoration: none;
     transition: transform .1s ease-in-out;
+    cursor: url('../../assets/cursor/pointer.png') 20 12, auto;
 }
 
 .Home-Button:before {
@@ -84,6 +84,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: url('../../assets/cursor/pointer.png') 20 12, auto;
 }
 
 .Home-Button:hover:before {
@@ -124,7 +125,7 @@ body {
 .Social-Links svg {
     width: 1.3em;
     height: 1.3em;
-    fill: #fff
+    fill: #fff;
 }
 
 .Social-Links p {
