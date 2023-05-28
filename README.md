@@ -41,6 +41,6 @@ npm i -g serve
 ```bash
 serve .
 ```
-> The project will be running at [http://localhost:3000/Ark-Portfolio](http://localhost:3000/Ark-Portfolio)\
-<br>
-You can deploy the project into nginx, apache or any other web server of your choice. Just create a copy of the `Ark-Portfolio` directory inside  of your web server (Usually located at `/var/www/html/`).
+> The project will be running at [http://localhost:3000/Ark-Portfolio](http://localhost:3000/Ark-Portfolio)
+>
+> You can deploy the project into nginx, apache or any other web server of your choice. Just create a copy of the `Ark-Portfolio` directory inside  of your web server (Usually located at `/var/www/html/`).
