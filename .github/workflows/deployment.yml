@@ -3,8 +3,8 @@ on:
   push:
     branches: [ "main" ]
 jobs:
-  update-badges:
-    name: Update Badges
+  update-loc-badge:
+    name: Update Lines of Code Badge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
