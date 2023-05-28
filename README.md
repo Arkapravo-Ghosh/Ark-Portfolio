@@ -26,7 +26,7 @@ npm i
 ```bash
 npm run dev
 ```
-> The project will be running at [http://localhost:3000](http://localhost:3000)
+> The project will be running at [http://localhost:3000/Ark-Portfolio](http://localhost:3000/Ark-Portfolio)
 - Build an optimized production build for deployment of the project
 ```bash
 npm run build
@@ -38,6 +38,6 @@ npm i -g serve
 ```
 #### Run the production build using `serve`
 ```bash
-serve -s dist
+serve -s .
 ```
 > You can deploy the project into nginx, apache or any other web server of your choice. Just copy all contents from the `dist` folder to the root of your web server (Usually located at `/var/www/html`).
