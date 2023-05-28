@@ -1,0 +1,99 @@
+name: "main"
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  update-badges:
+    name: Update Badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download cloc
+        run: |
+          sudo apt update
+          sudo apt install -y cloc
+      - name: Get the Numbers
+        run: |
+          echo CODE_LINES=$(cloc . --exclude-list-file=.clocignore | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
+      - name: Create Lines-of-Code-Badge
+        uses: schneegans/dynamic-badges-action@v1.6.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: ${{ vars.GIST_ID }}
+          filename: loc.json
+          label: Lines of Code
+          message: ${{ env.CODE_LINES }}
+          color: blue
+          forceUpdate: true
+  codeql-analysis:
+    name: Analyze
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript' ]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "/language:${{matrix.language}}"
+  deploy-to-gh-pages:
+    needs: codeql-analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Configure git
+        run: |
+          git config --global user.name '${{ github.repository_owner }}'
+          git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode | gpg --import
+          git config --global user.signingkey ${{ secrets.GPG_KEY_ID }}
+          git config --global commit.gpgsign true
+      - name: Deploy to gh-pages
+        run: |
+          npm run deploy
+  deploy-to-server:
+    needs: codeql-analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SERVER_SSH_KEY }}" | base64 --decode > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy to Server
+        run: |
+          ssh -i ~/.ssh/id_rsa ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "rm -rf public_html/Ark-Portfolio/*"
+          scp -r Ark-Portfolio/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:public_html/Ark-Portfolio/
