@@ -4,8 +4,7 @@
 ![loc](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Arkapravo-Ghosh/9a1184af0894a8b86cc3fdf0c8f82195/raw/loc.json)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Arkapravo-Ghosh/Ark-Portfolio)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Arkapravo-Ghosh/Ark-Portfolio)\
-[![CodeQL](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/github-code-scanning/codeql)
-[![pages-build-deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/pages/pages-build-deployment)
+[![Deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/deployment.yml/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/deployment.yml)
 > Check out the site at [https://arkapravo-ghosh.github.io/Ark-Portfolio](https://arkapravo-ghosh.github.io/Ark-Portfolio)
 # Build the project
 ## Prerequisites
