@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import './styles/App.css';
-// import AnimatedCursor from 'react-animated-cursor';
 // import ReactGA from 'react-ga4';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
@@ -25,31 +24,8 @@ const router = createBrowserRouter(
 );
 
 export default function App() {
-  /*
-  const outerAlpha = 0.3;
-  const innerSize = 13.5;
-  const outerSize = 13.5;
-  const outerScale = 6;
-  const innerScale = 0.8;
-  const trailingSpeed = 8;
-  const innerStyle = { backgroundColor: 'var(--inner-cursor-color)' };
-  const outerStyle = { backgroundColor: 'var(--outer-cursor-color)' };
-  const clickables = ['.Home-Button', '.social-icon'];
-  */
-
   return (
     <div className="App">
-      {/* <AnimatedCursor
-        outerAlpha={outerAlpha}
-        innerSize={innerSize}
-        outerSize={outerSize}
-        outerScale={outerScale}
-        innerScale={innerScale}
-        trailingSpeed={trailingSpeed}
-        innerStyle={innerStyle}
-        outerStyle={outerStyle}
-        clickables={clickables}
-      /> */}
       <React.Fragment>
         <RouterProvider router={router} />
         <Footer />
