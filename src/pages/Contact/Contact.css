@@ -54,7 +54,7 @@ body {
 
 .Contact-Body-Left a {
     color: #fff;
-    cursor: url("../../assets/cursor/pointer.png") 20 12, auto;
+    cursor: url('../../assets/cursor/pointer.png') 12 7, auto;
 }
 
 /*
@@ -96,7 +96,7 @@ textarea {
 }
 
 .Contact-Body-Right form input:hover, textarea:hover {
-    cursor: url("../../assets/cursor/text-select.png") 20 12, auto;
+    cursor: url("../../assets/cursor/text-select.png") 12 8, auto;
 }
 
 .Contact-Body-Right form textarea {
@@ -142,7 +142,7 @@ textarea::placeholder {
     background-color: #00fbff;
     color: #000000;
     box-shadow: 0 0 5px #00fbff;
-    cursor: url("../../assets/cursor/pointer.png") 20 12, auto;
+    cursor: url('../../assets/cursor/pointer.png') 12 7, auto;
 }
 
 @media screen and (max-width: 900px) {

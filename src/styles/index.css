@@ -10,7 +10,7 @@
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  cursor: url('../assets/cursor/normal.png') 7 19, auto;
+  cursor: url('../assets/cursor/normal.png') 4 11, auto;
 }
 
 ::selection {
