@@ -54,7 +54,7 @@ body {
 
 .Contact-Body-Left a {
     color: #fff;
-    cursor: url('../../assets/cursor/pointer.png') 12 7, auto;
+    cursor: var(--pointer);
 }
 
 /*
@@ -96,7 +96,7 @@ textarea {
 }
 
 .Contact-Body-Right form input:hover, textarea:hover {
-    cursor: url("../../assets/cursor/text-select.png") 12 8, auto;
+    cursor: var(--text-select);
 }
 
 .Contact-Body-Right form textarea {
@@ -128,7 +128,7 @@ textarea::placeholder {
     outline: none;
     background-color: #404040;
     color: #ffffff;
-    cursor: pointer;
+    cursor: var(--pointer);
     transition: all 0.2s ease-in-out;
     align-items: center;
     justify-content: center;
@@ -142,7 +142,7 @@ textarea::placeholder {
     background-color: #00fbff;
     color: #000000;
     box-shadow: 0 0 5px #00fbff;
-    cursor: url('../../assets/cursor/pointer.png') 12 7, auto;
+    cursor: var(--pointer);
 }
 
 @media screen and (max-width: 900px) {

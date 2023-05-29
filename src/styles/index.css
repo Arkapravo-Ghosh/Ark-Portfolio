@@ -1,3 +1,9 @@
+html {
+  --pointer: url('../assets/cursor/pointer.png') 12 7, auto;
+  --normal: url('../assets/cursor/normal.png') 4 11, auto;
+  --text-select: url('../assets/cursor/text-select.png') 12 8, auto;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
@@ -5,7 +11,7 @@
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  cursor: url('../assets/cursor/normal.png') 4 11, auto;
+  cursor: var(--normal);
 }
 
 ::selection {
