@@ -117,6 +117,7 @@
         position: absolute;
         top: 12.5px;
         left: 10px;
+        cursor: var(--pointer);
     }
 
     .nav-menu_burger {
@@ -129,6 +130,7 @@
         transition: all 0.5s ease-in-out;
         z-index: 10;
         position: fixed;
+        cursor: var(--pointer);
     }
 
     .nav-menu_burger::before,
