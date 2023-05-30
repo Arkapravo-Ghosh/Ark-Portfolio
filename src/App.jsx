@@ -9,7 +9,7 @@ import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
 
-// const TRACKING_ID = "G-X56MMZ2G83";
+// const TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID;
 // ReactGA.initialize(TRACKING_ID);
 
 const router = createBrowserRouter(
@@ -19,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="/Ark-Portfolio/about" element={<About />} />
       <Route path="/Ark-Portfolio/portfolio" element={<Portfolio />} />
       <Route path="/Ark-Portfolio/contact" element={<Contact />} />
+      <Route path="*" element={<Home />} />
     </Route>
   )
 );

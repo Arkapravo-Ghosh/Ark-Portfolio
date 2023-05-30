@@ -69,7 +69,6 @@ export default function NavBar() {
               </motion.img>
             </NavLink>
           </div>
-
           <div className="list">
             <ul>
               <motion.li transition={spring} whileHover={textHover}>
