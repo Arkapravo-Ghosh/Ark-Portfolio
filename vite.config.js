@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/Ark-Portfolio/',
   server: {
     port: 3000,
+    historyApiFallback: true,
   },
   build: {
     outDir: './Ark-Portfolio'
