@@ -131,6 +131,6 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/${{ env.OWNER_LC }}/ark-portfolio:latest , docker.io/${{ vars.DOCKERHUB_USERNAME }}/ark-portfolio:latest
+          tags: ghcr.io/${{ env.OWNER_LC }}/ark-portfolio:latest, docker.io/${{ vars.DOCKERHUB_USERNAME }}/ark-portfolio:latest
         env:
           BUILDX_NO_DEFAULT_ATTESTATIONS: 1
