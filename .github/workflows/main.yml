@@ -106,8 +106,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: set lower case owner name
@@ -131,13 +129,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
-          tags: ghcr.io/${{ env.OWNER_LC }}/ark-portfolio:latest
-      - name: Build and push to DockerHub
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: docker.io/${{ vars.DOCKERHUB_USERNAME }}/ark-portfolio:latest
+          tags: ghcr.io/${{ env.OWNER_LC }}/ark-portfolio:latest , docker.io/${{ vars.DOCKERHUB_USERNAME }}/ark-portfolio:latest
