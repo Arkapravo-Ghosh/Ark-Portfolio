@@ -27,19 +27,33 @@ npm i
 npm run dev
 ```
 > The project will be running at [http://localhost:3000/Ark-Portfolio/](http://localhost:3000/Ark-Portfolio/)
+- Preview the production build
+```bash
+npm run preview
+```
 - Build an optimized production build for deployment of the project
 ```bash
 npm run build
 ```
-- Run the production build
-#### Install `serve`
+> The optimized production build will be available in the `Ark-Portfolio` directory, make sure to copy the `Ark-Portfolio` directory inside the root directory of your web server.
+## Deploy the project
+### Docker Compose
+- Create a directory
 ```bash
-npm i -g serve
+mkdir Ark-Portfolio
 ```
-#### Run the production build using `serve`
+- Go to the directory
 ```bash
-serve .
+cd Ark-Portfolio
 ```
-> The project will be running at [http://localhost:3000/Ark-Portfolio](http://localhost:3000/Ark-Portfolio)
+- Download the `docker-compose.yml` file
+```bash
+wget https://raw.githubusercontent.com/Arkapravo-Ghosh/Ark-Portfolio/main/docker-compose.yml
+```
+- Run the project
+```bash
+docker compose up -d
+```
+> The project will be running at [http://localhost/Ark-Portfolio](http://localhost/Ark-Portfolio)
 >
-> You can deploy the project into nginx, apache or any other web server of your choice. Just create a copy of the `Ark-Portfolio` directory inside  of your web server (Usually located at `/var/www/html/`).
+> To stop the project, run `docker compose down` in the same directory.
