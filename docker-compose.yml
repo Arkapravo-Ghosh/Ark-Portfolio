@@ -1,6 +1,7 @@
 services:
   ark-portfolio:
     image: ghcr.io/arkapravo-ghosh/ark-portfolio:latest
+    pull_policy: always
     container_name: ark-portfolio
     restart: always
     ports:
