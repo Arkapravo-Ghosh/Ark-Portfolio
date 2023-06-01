@@ -1,6 +1,6 @@
 services:
   ark-portfolio:
-    image: docker.io/arkapravoghosh1/ark-portfolio:latest
+    image: ghcr.io/arkapravo-ghosh/ark-portfolio:latest
     container_name: ark-portfolio
     restart: always
     ports:
