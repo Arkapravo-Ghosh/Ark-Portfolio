@@ -29,6 +29,8 @@ body {
     padding-top: 0px;
     font-size: 18px;
     font-weight: 400;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .Home-Buttons {
