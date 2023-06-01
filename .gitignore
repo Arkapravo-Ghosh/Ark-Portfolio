@@ -25,5 +25,6 @@ yarn-debug.log*
 yarn-error.log*
 .old
 deploy.sh
+docker-build.sh
 .hintrc
 .env
