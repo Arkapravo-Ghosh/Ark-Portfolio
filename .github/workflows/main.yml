@@ -101,7 +101,7 @@ jobs:
           scp -r Ark-Portfolio/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:public_html/Ark-Portfolio/
   publish-docker-image:
     name: Publish Docker Image
-    #needs: codeql-analysis
+    needs: codeql-analysis
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
