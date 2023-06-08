@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React /* , { useState } */ from "react";
 import "./Contact.css";
 export default function Contact() {
   function form_submit(event) {

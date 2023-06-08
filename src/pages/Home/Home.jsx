@@ -12,7 +12,7 @@ import {
 const typestrings = [
   'DevSecOps Engineer',
   'I love to code',
-]
+];
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavBar.css";
 import { Outlet, NavLink } from "react-router-dom";
@@ -137,5 +137,5 @@ export default function NavBar() {
         <Outlet />
       </AnimatePresence>
     </>
-  )
-}
+  );
+};

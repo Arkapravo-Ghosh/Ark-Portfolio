@@ -11,5 +11,5 @@ export default function Footer() {
         Created by Arkapravo Ghosh
       </div>
     </footer>
-  )
+  );
 };
