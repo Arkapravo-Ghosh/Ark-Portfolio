@@ -73,8 +73,8 @@ export default function NavBar() {
           <div className="list">
             <ul>
               {
-                Object.values(NavLinks).map((link) => (
-                  <motion.li transition={spring} whileHover={textHover}>
+                Object.values(NavLinks).map((link, index) => (
+                  <motion.li key={index} transition={spring} whileHover={textHover}>
                     <NavLink to={link.to}>{link.text}</NavLink>
                   </motion.li>
                 ))
@@ -104,8 +104,8 @@ export default function NavBar() {
                   animate="finished"
                 >
                   {
-                    Object.values(NavLinks).map((link) => (
-                      <motion.li variants={sidebar_item}>
+                    Object.values(NavLinks).map((link, index) => (
+                      <motion.li key={index} variants={sidebar_item}>
                         <NavLink to={link.to}>{link.text}</NavLink>
                       </motion.li>
                     ))

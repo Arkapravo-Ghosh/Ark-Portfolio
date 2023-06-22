@@ -23,15 +23,15 @@ export default function Contact() {
             <h2>Contact</h2>
             <p>
               <b>Email:</b>{" "}
-              <a href="mailto:arkapravoghosh99@gmail.com" target="_blank">arkapravoghosh99@gmail.com</a>
+              <a href="mailto:arkapravoghosh99@gmail.com" target="_blank" rel="noreferrer noopener">arkapravoghosh99@gmail.com</a>
             </p>
             <p>
               <b>Phone:</b>{" "}
-              <a href="tel:+917003768803" target="_blank">+91 70037 68803</a>
+              <a href="tel:+917003768803" target="_blank" rel="noreferrer noopener">+91 70037 68803</a>
             </p>
             <p>
               <b>WhatsApp:</b>{" "}
-              <a href="https://wa.me/917003768803" target="_blank">+91 70037 68803</a>
+              <a href="https://wa.me/917003768803" target="_blank" rel="noreferrer noopener">+91 70037 68803</a>
             </p>
           </div>
           <div className="Contact-Body-Right">
@@ -41,7 +41,7 @@ export default function Contact() {
               <input type="text" placeholder="Name" name="user_name" />
               <input type="email" placeholder="Email" name="user_email" />
               <textarea placeholder="Message" name="message" />
-              <input class="button" type="submit" value="Send" />
+              <input className="button" type="submit" value="Send" />
             </form>
           </div>
         </div>
