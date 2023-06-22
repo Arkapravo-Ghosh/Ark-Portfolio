@@ -6,7 +6,7 @@ RUN npm run build
 FROM nginx:stable
 EXPOSE 80/tcp
 COPY ./docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /usr/app/Ark-Portfolio /usr/share/nginx/html/Ark-Portfolio
+COPY --from=build /usr/app/Ark-Portfolio/ /usr/share/nginx/html/
 LABEL org.opencontainers.image.source=https://github.com/Arkapravo-Ghosh/Ark-Portfolio
 LABEL org.opencontainers.image.description="Arkapravo Ghosh's Portfolio Website"
 LABEL org.opencontainers.image.licenses=MIT
