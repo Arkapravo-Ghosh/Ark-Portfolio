@@ -27,4 +27,5 @@ yarn-error.log*
 deploy.sh
 docker-build.sh
 .hintrc
-.env
+.env.development
+.env.production
