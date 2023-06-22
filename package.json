@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build && cp Ark-Portfolio/index.html Ark-Portfolio/404.html",
+    "predeploy": "vite build --base=/Ark-Portfolio/ && cp Ark-Portfolio/index.html Ark-Portfolio/404.html",
     "deploy": "gh-pages -d Ark-Portfolio"
   },
   "dependencies": {

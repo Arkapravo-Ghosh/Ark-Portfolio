@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import "./NavBar.css";
 import { Outlet, NavLink } from "react-router-dom";
 import logo from "/Ark_Logo.webp";
+import NavLinks from "./NavLinks";
 
 const textHover = {
   type: "spring",
@@ -59,7 +60,7 @@ export default function NavBar() {
       <AnimatePresence>
         <nav className="navbar">
           <div className="logo">
-            <NavLink to="/Ark-Portfolio/">
+            <NavLink to="/">
               <motion.img
                 height="30x"
                 width="30px"
@@ -71,21 +72,16 @@ export default function NavBar() {
           </div>
           <div className="list">
             <ul>
-              <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/Ark-Portfolio/">Home</NavLink>
-              </motion.li>
-              <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/Ark-Portfolio/about">About</NavLink>
-              </motion.li>
-              <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/Ark-Portfolio/portfolio">Portfolio</NavLink>
-              </motion.li>
-              <motion.li transition={spring} whileHover={textHover}>
-                <NavLink to="/Ark-Portfolio/contact">Contact</NavLink>
-              </motion.li>
+              {
+                Object.values(NavLinks).map((link) => (
+                  <motion.li transition={spring} whileHover={textHover}>
+                    <NavLink to={link.to}>{link.text}</NavLink>
+                  </motion.li>
+                ))
+              }
             </ul>
           </div>
-          <NavLink to="/Ark-Portfolio/">
+          <NavLink to="/">
             <motion.div className='heading'>
               Ark Site
             </motion.div>
@@ -107,18 +103,13 @@ export default function NavBar() {
                   initial="start"
                   animate="finished"
                 >
-                  <motion.li variants={sidebar_item}>
-                    <NavLink to="/Ark-Portfolio/">Home</NavLink>
-                  </motion.li>
-                  <motion.li variants={sidebar_item}>
-                    <NavLink to="/Ark-Portfolio/about">About</NavLink>
-                  </motion.li>
-                  <motion.li variants={sidebar_item}>
-                    <NavLink to="/Ark-Portfolio/portfolio">Portfolio</NavLink>
-                  </motion.li>
-                  <motion.li variants={sidebar_item}>
-                    <NavLink to="/Ark-Portfolio/contact">Contact</NavLink>
-                  </motion.li>
+                  {
+                    Object.values(NavLinks).map((link) => (
+                      <motion.li variants={sidebar_item}>
+                        <NavLink to={link.to}>{link.text}</NavLink>
+                      </motion.li>
+                    ))
+                  }
                 </motion.ul>
               </AnimatePresence>
             </motion.div>
