@@ -57,7 +57,7 @@ export default function NavBar() {
   return (
     <>
       <AnimatePresence>
-        <div className="navbar">
+        <nav className="navbar">
           <div className="logo">
             <NavLink to="/Ark-Portfolio/">
               <motion.img
@@ -90,7 +90,7 @@ export default function NavBar() {
               Ark Site
             </motion.div>
           </NavLink>
-        </div>
+        </nav>
         <AnimatePresence>
           {showSidebar && (
             <motion.div
@@ -124,7 +124,7 @@ export default function NavBar() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div
+        <nav
           className={showSidebar ? "nav-menu open" : "nav-menu"}
           onClick={
             showSidebar
@@ -133,7 +133,7 @@ export default function NavBar() {
           }
         >
           <div className="nav-menu_burger" />
-        </div>
+        </nav>
         <Outlet />
       </AnimatePresence>
     </>
