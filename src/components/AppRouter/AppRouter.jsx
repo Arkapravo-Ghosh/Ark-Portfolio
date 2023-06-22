@@ -1,6 +1,6 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import NavLinks from '../NavBar/NavLinks';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavLinks from "../NavBar/NavLinks";
 
 export default function AppRouter() {
   return (

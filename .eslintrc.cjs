@@ -5,32 +5,32 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   settings: {
     react: {
-      version: '18.2',
+      version: "18.2",
     },
   },
   plugins: [
-    'react-refresh',
+    "react-refresh",
   ],
   rules: {
-    'react-refresh/only-export-components': 'warn',
-    'no-unused-vars': [
-      'error',
+    "react-refresh/only-export-components": "warn",
+    "no-unused-vars": [
+      "error",
       {
-        'varsIgnorePattern': 'React',
+        "varsIgnorePattern": "React",
       },
     ],
-    'no-extra-semi': 'off',
-    'react/no-unescaped-entities': 'off',
+    "no-extra-semi": "off",
+    "react/no-unescaped-entities": "off",
   },
 };

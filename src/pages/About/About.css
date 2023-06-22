@@ -1,0 +1,12 @@
+.About {
+  display: flex;
+  flex-direction: column;
+}
+
+.About-Header {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavBar.css";
 import { Outlet, NavLink } from "react-router-dom";
@@ -82,7 +82,7 @@ export default function NavBar() {
             </ul>
           </div>
           <NavLink to="/">
-            <motion.div className='heading'>
+            <motion.div className="heading">
               Ark Site
             </motion.div>
           </NavLink>

@@ -1,12 +1,12 @@
 .Portfolio {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .Portfolio-Header {
-    width: 100%;
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

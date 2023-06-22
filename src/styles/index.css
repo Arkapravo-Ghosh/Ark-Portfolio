@@ -1,7 +1,7 @@
 html {
-  --pointer: url('../assets/cursor/pointer.png') 12 7, auto;
-  --normal: url('../assets/cursor/normal.png') 4 11, auto;
-  --text-select: url('../assets/cursor/text-select.png') 12 8, auto;
+  --pointer: url("../assets/cursor/pointer.png") 12 7, auto;
+  --normal: url("../assets/cursor/normal.png") 4 11, auto;
+  --text-select: url("../assets/cursor/text-select.png") 12 8, auto;
 }
 
 *::-webkit-scrollbar {
