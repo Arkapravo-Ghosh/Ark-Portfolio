@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import './styles/App.css';
 // import ReactGA from 'react-ga4';
 import NavBar from './components/NavBar/NavBar';
