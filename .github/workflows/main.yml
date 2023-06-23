@@ -52,7 +52,7 @@ jobs:
         category: "/language:${{matrix.language}}"
   deploy-to-gh-pages:
     name: Deploy to GitHub Pages
-    #needs: codeql-analysis
+    needs: codeql-analysis
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
