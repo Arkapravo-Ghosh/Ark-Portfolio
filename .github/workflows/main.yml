@@ -81,7 +81,7 @@ jobs:
           git remote remove origin
           git remote add origin https://${{ secrets.PRIVATE_TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
           git add .
-          git commit -m "Deploy to GitHub Pages"
+          git diff-index --quiet HEAD || git commit -m "Deploy to GitHub Pages"
           git push --set-upstream origin main
   deploy-to-server:
     name: Deploy to Server
