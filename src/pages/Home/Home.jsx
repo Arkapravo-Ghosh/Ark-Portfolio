@@ -28,6 +28,7 @@ export default function Home() {
           />
         </div>
         <div className="Home-Buttons">
+          Hi
           <Link to="/about" style={{ textDecoration: 'none' }}>
             <button className="Home-Button"><p>About Me</p></button>
           </Link>
