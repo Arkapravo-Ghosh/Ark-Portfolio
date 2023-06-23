@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-copy">
-        &copy; 2023 | All Rights Reserved
+        &copy; {new Date().getFullYear()} | All Rights Reserved
       </div>
       <div className="footer-author">
         Created by Arkapravo Ghosh
