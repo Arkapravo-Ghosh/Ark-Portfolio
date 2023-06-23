@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Arkapravo-Ghosh/Ark-Portfolio)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Arkapravo-Ghosh/Ark-Portfolio)\
 [![Deployment](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/Arkapravo-Ghosh/Ark-Portfolio/actions/workflows/main.yml)
-> Check out the site at [https://arkapravo-ghosh.github.io/Ark-Portfolio](https://arkapravo-ghosh.github.io/Ark-Portfolio)
+> Check out the site at [https://arkapravo-ghosh.github.io](https://arkapravo-ghosh.github.io)
 >
 > Prebuilt Docker Image: [Click Here](https://hub.docker.com/r/arkapravoghosh1/ark-portfolio)
 # Build the project
