@@ -12,6 +12,7 @@
 /build
 /dist
 /Ark-Portfolio
+*.github.io
 
 # misc
 .DS_Store
