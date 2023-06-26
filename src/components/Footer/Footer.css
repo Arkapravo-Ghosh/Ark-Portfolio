@@ -1,4 +1,5 @@
 footer {
+  --github-icon-size: 20px;
   position: fixed;
   display: flex;
   bottom: 0;
@@ -30,12 +31,32 @@ footer {
   bottom: 0;
 }
 
+.footer-github {
+  display: flex;
+  position: fixed;
+  left: calc(50% - var(--github-icon-size));
+  bottom: 13px;
+  cursor: var(--pointer);
+}
+
+.footer-github a {
+  color: white;
+  cursor: var(--pointer);
+}
+
+.footer-github svg {
+  width: var(--github-icon-size);
+  height: var(--github-icon-size);
+  cursor: var(--pointer);
+}
+
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
     height: 105px;
     justify-content: center;
     align-items: center;
+    --github-icon-size: 40px;
   }
 
   .footer-copy {
@@ -45,6 +66,13 @@ footer {
   .footer-author {
     bottom: 10px;
     right: unset;
+    position: fixed;
+  }
+
+  .footer-github {
+    bottom: 27px;
+    right: 30px;
+    left: unset;
     position: fixed;
   }
 }
