@@ -1,5 +1,6 @@
 import React /* , { useState } */ from "react";
 import "./Contact.css";
+
 export default function Contact() {
   function form_submit(event) {
     event.preventDefault()
@@ -10,7 +11,7 @@ export default function Contact() {
     const message = form.elements["message"].value
     window.open(`mailto:${mail}?subject=Message from ${user_name} (${user_email})&body=${message}`)
     form.reset();
-  }
+  };
   return (
     <>
       <div className="bg" />
