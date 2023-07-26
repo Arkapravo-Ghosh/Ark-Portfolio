@@ -79,6 +79,7 @@ jobs:
           rm -rf ./${{ github.repository_owner }}.github.io/*
           cp -r Ark-Portfolio/* ./${{ github.repository_owner }}.github.io/
           cp docs/PAGES_README.md ./${{ github.repository_owner }}.github.io/README.md
+          cp docs/PAGES_CNAME ./${{ github.repository_owner }}.github.io/CNAME
           cd ./${{ github.repository_owner }}.github.io/
           git remote remove origin
           git remote add origin https://${{ secrets.PRIVATE_TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
