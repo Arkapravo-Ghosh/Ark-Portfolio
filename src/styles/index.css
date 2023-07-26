@@ -2,6 +2,12 @@ html {
   --pointer: url("../assets/cursor/pointer.png") 12 7, auto;
   --normal: url("../assets/cursor/normal.png") 4 11, auto;
   --text-select: url("../assets/cursor/text-select.png") 12 8, auto;
+  /*
+  --pointer: pointer;
+  --normal: default;
+  --text-select: text;
+  */
+  cursor: var(--normal);
 }
 
 *::-webkit-scrollbar {
@@ -11,7 +17,6 @@ html {
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  cursor: var(--normal);
 }
 
 ::selection {

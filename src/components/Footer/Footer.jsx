@@ -14,7 +14,7 @@ export default function Footer() {
       </div>
       <div className="footer-github">
         <Link target="_blank" to="https://github.com/Arkapravo-Ghosh/Ark-Portfolio">
-          <FaGithub />
+          <FaGithub className="gh-icon" />
         </Link>
       </div>
     </footer>

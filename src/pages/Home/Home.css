@@ -154,8 +154,7 @@ body {
   transition: all .3s;
 }
 
-.Social-Links ul li svg:hover,
-.Social-Links ul li path:hover {
+.icon {
   cursor: var(--pointer);
 }
 

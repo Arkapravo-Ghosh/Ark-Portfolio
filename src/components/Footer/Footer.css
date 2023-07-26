@@ -36,17 +36,13 @@ footer {
   position: fixed;
   left: calc(50% - var(--github-icon-size));
   bottom: 13px;
-  cursor: var(--pointer);
 }
 
 .footer-github a {
   color: white;
-  cursor: var(--pointer);
 }
 
-.footer-github svg {
-  width: var(--github-icon-size);
-  height: var(--github-icon-size);
+.gh-icon {
   cursor: var(--pointer);
 }
 

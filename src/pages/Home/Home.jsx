@@ -42,21 +42,21 @@ export default function Home() {
             {"https://twitter.com/ArkapravoGhosh1" && (
               <li className="social-icon">
                 <a href="https://twitter.com/ArkapravoGhosh1" target="_blank" rel="noreferrer noopener">
-                  <FaTwitter />
+                  <FaTwitter className="icon" />
                 </a>
               </li>
             )}
             {"https://github.com/Arkapravo-Ghosh" && (
               <li className="social-icon">
                 <a href="https://github.com/Arkapravo-Ghosh" target="_blank" rel="noreferrer noopener">
-                  <FaGithub />
+                  <FaGithub className="icon" />
                 </a>
               </li>
             )}
             {"https://www.linkedin.com/in/Arkapravo-Ghosh" && (
               <li className="social-icon">
                 <a href="https://www.linkedin.com/in/Arkapravo-Ghosh" target="_blank" rel="noreferrer noopener">
-                  <FaLinkedin />
+                  <FaLinkedin className="icon" />
                 </a>
               </li>
             )}
