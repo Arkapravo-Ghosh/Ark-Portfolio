@@ -74,7 +74,7 @@ export default function NavBar() {
             <ul>
               {
                 Object.values(NavLinks).map((link, index) => (
-                  <motion.li key={index} transition={spring} whileHover={textHover}>
+                  <motion.li key={`nav_link_${index}`} transition={spring} whileHover={textHover}>
                     <NavLink to={link.to}>{link.text}</NavLink>
                   </motion.li>
                 ))
@@ -105,7 +105,7 @@ export default function NavBar() {
                 >
                   {
                     Object.values(NavLinks).map((link, index) => (
-                      <motion.li key={index} variants={sidebar_item}>
+                      <motion.li key={`sidebar_link_${index}`} variants={sidebar_item}>
                         <NavLink to={link.to}>{link.text}</NavLink>
                       </motion.li>
                     ))

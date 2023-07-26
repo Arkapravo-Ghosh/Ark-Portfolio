@@ -41,23 +41,23 @@ export default function Home() {
           <ul>
             {"https://twitter.com/ArkapravoGhosh1" && (
               <li className="social-icon">
-                <a href="https://twitter.com/ArkapravoGhosh1" target="_blank" rel="noreferrer noopener">
+                <Link to="https://twitter.com/ArkapravoGhosh1" target={"_blank"} rel={"noreferrer noopener"} aria-label={"Twitter"}>
                   <FaTwitter className="icon" />
-                </a>
+                </Link>
               </li>
             )}
             {"https://github.com/Arkapravo-Ghosh" && (
               <li className="social-icon">
-                <a href="https://github.com/Arkapravo-Ghosh" target="_blank" rel="noreferrer noopener">
+                <Link to="https://github.com/Arkapravo-Ghosh" target={"_blank"} rel={"noreferrer noopener"} aria-label={"GitHub"}>
                   <FaGithub className="icon" />
-                </a>
+                </Link>
               </li>
             )}
             {"https://www.linkedin.com/in/Arkapravo-Ghosh" && (
               <li className="social-icon">
-                <a href="https://www.linkedin.com/in/Arkapravo-Ghosh" target="_blank" rel="noreferrer noopener">
+                <Link to="https://www.linkedin.com/in/Arkapravo-Ghosh" target={"_blank"} rel={"noreferrer noopener"} aria-label={"LinkedIn"}>
                   <FaLinkedin className="icon" />
-                </a>
+                </Link>
               </li>
             )}
           </ul>

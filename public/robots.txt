@@ -1,4 +1,11 @@
 User-agent: *
-Disallow:
 
-Sitemap: https://arkapravoghosh1.tildevarsh.in/sitemap.xml
+Allow: /
+
+Allow: /about
+
+Allow: /contact
+
+Allow: /portfolio
+
+Sitemap: https://ark.ark-tech.in/sitemap.xml

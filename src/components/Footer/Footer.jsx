@@ -13,7 +13,7 @@ export default function Footer() {
         Created by Arkapravo Ghosh
       </div>
       <div className="footer-github">
-        <Link target="_blank" to="https://github.com/Arkapravo-Ghosh/Ark-Portfolio">
+        <Link to="https://github.com/Arkapravo-Ghosh/Ark-Portfolio" target={"_blank"} rel={"noreferrer noopener"} aria-label={"Source Code"}>
           <FaGithub className="gh-icon" />
         </Link>
       </div>

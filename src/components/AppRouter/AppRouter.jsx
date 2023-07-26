@@ -11,9 +11,9 @@ export default function AppRouter() {
     <AnimatePresence>
       <Routes location={location}>
         {
-          Object.values(NavLinks).map((link) => (
+          Object.values(NavLinks).map((link, index) => (
             <Route
-              key={link.to}
+              key={`route_${index}`}
               path={link.to}
               element={<MotionRouteWrapper element={link.element} />}
             />
