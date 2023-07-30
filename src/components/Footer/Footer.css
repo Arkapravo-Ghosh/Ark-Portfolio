@@ -32,10 +32,10 @@ footer {
 }
 
 .footer-github {
-  display: flex;
   position: fixed;
-  left: calc(50% - var(--github-icon-size));
-  bottom: 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
 }
 
 .footer-github a {
@@ -44,6 +44,8 @@ footer {
 
 .gh-icon {
   cursor: var(--pointer);
+  height: var(--github-icon-size);
+  width: var(--github-icon-size);
 }
 
 @media (max-width: 768px) {
@@ -69,6 +71,6 @@ footer {
     bottom: 27px;
     right: 30px;
     left: unset;
-    position: fixed;
+    transform: unset;
   }
 }
