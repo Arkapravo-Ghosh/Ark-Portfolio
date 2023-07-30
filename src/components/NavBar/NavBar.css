@@ -84,7 +84,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glowing 200s linear infinite;
-  background-size: 400%;
+  background-size: 600%;
 }
 
 .Heading {

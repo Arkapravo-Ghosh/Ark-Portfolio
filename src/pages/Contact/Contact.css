@@ -12,7 +12,7 @@ body {
   width: 100vw;
   z-index: -1;
   background-image: url("../../assets/bg.jpg");
-  filter: invert(1) grayscale(1) contrast(0.9) brightness(0.99) blur(10px);
+  filter: invert(1) grayscale(1) contrast(0.9) brightness(0.7) blur(10px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,8 +127,8 @@ textarea::placeholder {
   height: 30px;
   border: none;
   outline: none;
-  background-color: #404040;
-  color: #ffffff;
+  background-color: #00fbff;
+  color: #000000;
   cursor: var(--pointer);
   transition: all 0.2s ease-in-out;
   align-items: center;
