@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavBar.css";
 import { Outlet, NavLink } from "react-router-dom";
-import logo from "/Ark_Logo.webp";
+import logo from "/Ark_Logo.svg";
 import NavLinks from "./NavLinks";
 
 const textHover = {
