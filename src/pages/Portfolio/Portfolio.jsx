@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <>
       <div className="Portfolio">
-        <div className="progress">
+        <div className="progress disable-select">
           <p>
             Development Still on Progress
           </p>

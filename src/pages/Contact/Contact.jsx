@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
           <div className="Contact-Body-Right">
             <h2>Get in Touch</h2>
-            <form id="contact-form" onSubmit={form_submit}>
+            <form id="contact-form disable-select" onSubmit={form_submit}>
               <input type="hidden" name="contact_number" />
               <input type="text" placeholder="Name" name="user_name" />
               <input type="email" placeholder="Email" name="user_email" />

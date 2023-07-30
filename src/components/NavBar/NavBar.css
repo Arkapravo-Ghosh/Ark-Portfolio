@@ -59,21 +59,58 @@
 }
 
 .heading {
+  display: flex;
   position: fixed;
   right: 20px;
   font-size: 20px;
   font-weight: 600;
-  padding-top: 12px;
+  padding-top: 15px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-decoration: none;
-  color: #ffffff;
   cursor: var(--pointer);
   /* cursor: none; */
+  gap: 30px;
+}
+
+.heading a {
+  text-decoration: none;
+  cursor: var(--pointer);
+  /* cursor: none; */
+}
+
+.Resume {
+  background: -webkit-linear-gradient(45deg, #ff0000df, #ff7300df, #fffb00df, #48ff00df, #00ffd5df, #002bffdf, #7a00ffdf, #ff00c8df, #ff0000df, #ff7300df);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowing 200s linear infinite;
+  background-size: 400%;
+}
+
+.Heading {
+  color: #ffffff;
 }
 
 .sidebar {
   display: none;
   z-index: 10;
+}
+
+.ResumeMobile {
+  display: none;
+  text-decoration: none;
+  color: unset;
+}
+
+.ResumeMobile a {
+  text-decoration: none;
+}
+
+.ResumeIcon {
+  height: 35px;
+  width: 35px;
+  margin-top: 4px;
+  cursor: var(--pointer);
 }
 
 @media screen and (max-width: 800px) {
@@ -82,9 +119,11 @@
   }
 
   .logo {
-    display: unset;
+    display: flex;
     position: fixed;
     right: 5px;
+    align-items: center;
+    gap: 10px;
   }
 
   .logo img {
@@ -103,7 +142,15 @@
   .heading {
     top: 7px;
     right: unset;
-    margin-left: -33px;
+    padding-top: 12px;
+  }
+
+  .Resume {
+    display: none;
+  }
+
+  .ResumeMobile {
+    display: unset;
   }
 
   .nav-menu {

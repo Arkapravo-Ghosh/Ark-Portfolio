@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavBar.css";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import logo from "/Ark_Logo.svg";
 import NavLinks from "./NavLinks";
+import { PiBriefcase } from "react-icons/pi";
+
+const resume_link = "https://raw.githubusercontent.com/Arkapravo-Ghosh/ark-resume/main/Arkapravo_Ghosh_Resume.pdf";
 
 const textHover = {
   type: "spring",
@@ -59,7 +62,10 @@ export default function NavBar() {
     <>
       <AnimatePresence>
         <nav className="navbar">
-          <div className="logo">
+          <div className="logo disable-select">
+            <Link className="ResumeMobile" to={resume_link} type="application/pdf">
+              <PiBriefcase className="ResumeIcon" />
+            </Link>
             <NavLink to="/">
               <motion.img
                 height="30x"
@@ -70,7 +76,7 @@ export default function NavBar() {
               </motion.img>
             </NavLink>
           </div>
-          <div className="list">
+          <div className="list disable-select">
             <ul>
               {
                 Object.values(NavLinks).map((link, index) => (
@@ -81,11 +87,16 @@ export default function NavBar() {
               }
             </ul>
           </div>
-          <NavLink to="/">
-            <motion.div className="heading">
-              Ark Site
-            </motion.div>
-          </NavLink>
+          <div className="heading disable-select">
+            <Link className="Resume" to={resume_link} type="application/pdf">
+              Resume
+            </Link>
+            <NavLink className="Heading" to="/">
+              <motion.div className="">
+                Ark Site
+              </motion.div>
+            </NavLink>
+          </div>
         </nav>
         <AnimatePresence>
           {showSidebar && (
@@ -102,6 +113,7 @@ export default function NavBar() {
                   variants={sidebar}
                   initial="start"
                   animate="finished"
+                  className="disable-select"
                 >
                   {
                     Object.values(NavLinks).map((link, index) => (
@@ -123,7 +135,7 @@ export default function NavBar() {
               : () => setShowSidebar(true)
           }
         >
-          <div className="nav-menu_burger" />
+          <div className="nav-menu_burger disable-select" />
         </nav>
         <Outlet />
       </AnimatePresence>

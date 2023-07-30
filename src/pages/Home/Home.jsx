@@ -17,7 +17,7 @@ export default function Home() {
         <div className="Home-Header">
           <h1>Hi, I'm Arkapravo Ghosh</h1>
         </div>
-        <div className="Home-Typewriter">
+        <div className="Home-Typewriter disable-select">
           <Typewriter
             options={{
               strings: typestrings,
@@ -27,7 +27,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="Home-Buttons">
+        <div className="Home-Buttons disable-select">
           <Link to="/about" style={{ textDecoration: 'none' }}>
             <button className="Home-Button"><p>About Me</p></button>
           </Link>
@@ -36,7 +36,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="Home-Social">
+      <div className="Home-Social disable-select">
         <div className="Social-Links">
           <ul>
             {"https://twitter.com/ArkapravoGhosh1" && (

@@ -4,7 +4,7 @@ import "./About.css";
 export default function About() {
   return (
     <>
-      <div className="progress">
+      <div className="progress disable-select">
         <p>
           Development Still on Progress
         </p>

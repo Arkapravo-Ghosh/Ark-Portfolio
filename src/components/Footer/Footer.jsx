@@ -5,7 +5,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="disable-select">
       <div className="footer-copy">
         &copy; {new Date().getFullYear()} | All Rights Reserved
       </div>
