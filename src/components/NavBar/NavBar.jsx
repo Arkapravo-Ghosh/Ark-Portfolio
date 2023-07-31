@@ -59,9 +59,9 @@ const sidebar_item = {
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <>
+    <nav>
       <AnimatePresence>
-        <nav className="navbar">
+        <div className="navbar">
           <div className="logo disable-select">
             <Link className="ResumeMobile" to={resume_link} type="application/pdf">
               <PiBriefcase className="ResumeIcon" />
@@ -97,7 +97,7 @@ export default function NavBar() {
               </motion.div>
             </NavLink>
           </div>
-        </nav>
+        </div>
         <AnimatePresence>
           {showSidebar && (
             <motion.div
@@ -127,7 +127,7 @@ export default function NavBar() {
             </motion.div>
           )}
         </AnimatePresence>
-        <nav
+        <div
           className={showSidebar ? "nav-menu open" : "nav-menu"}
           onClick={
             showSidebar
@@ -136,9 +136,9 @@ export default function NavBar() {
           }
         >
           <div className="nav-menu_burger disable-select" />
-        </nav>
+        </div>
         <Outlet />
       </AnimatePresence>
-    </>
+    </nav>
   );
 };

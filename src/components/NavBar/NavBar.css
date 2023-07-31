@@ -7,7 +7,7 @@
   gap: 20px;
   padding: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 10;
