@@ -8,6 +8,7 @@ html {
   --text-select: text;
   */
   cursor: var(--normal);
+  height: 100vh;
 }
 
 *::-webkit-scrollbar {
