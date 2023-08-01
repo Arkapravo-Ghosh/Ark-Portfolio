@@ -33,3 +33,7 @@ html {
   flex-direction: column;
   color: white;
 }
+
+html {
+  height: 100vh;
+}
