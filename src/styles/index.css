@@ -8,6 +8,7 @@ html {
   --text-select: text;
   */
   cursor: var(--normal);
+  height: 100vh;
 }
 
 *::-webkit-scrollbar {
@@ -32,8 +33,4 @@ html {
   display: flex;
   flex-direction: column;
   color: white;
-}
-
-html {
-  height: 100vh;
 }
