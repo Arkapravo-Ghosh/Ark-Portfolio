@@ -8,7 +8,6 @@ html {
   --text-select: text;
   */
   cursor: var(--normal);
-  height: 100vh;
 }
 
 *::-webkit-scrollbar {
@@ -33,4 +32,10 @@ html {
   display: flex;
   flex-direction: column;
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    height: 100vh;
+  }
 }
