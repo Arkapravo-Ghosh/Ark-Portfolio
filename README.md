@@ -28,6 +28,12 @@ npm i
 ```bash
 npm run dev
 ```
+
+- Or use this to expose the vite server to your network
+```bash
+npm run dev-network
+```
+
 > The project will be running at [http://localhost:3000/Ark-Portfolio/](http://localhost:3000/Ark-Portfolio/)
 - Preview the production build
 ```bash
