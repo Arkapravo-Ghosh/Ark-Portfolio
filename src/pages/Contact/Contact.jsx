@@ -3,6 +3,7 @@ import "./Contact.css";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
+  const whatsappContactLink = "https://wa.me/917003768803";
   function form_submit(event) {
     event.preventDefault()
     const mail = "arkapravoghosh99@gmail.com"
@@ -34,7 +35,7 @@ export default function Contact() {
             </p>
             <p>
               <b>WhatsApp:</b>{" "}
-              <Link href="https://wa.me/917003768803" target={"_blank"} rel={"noreferrer noopener"}>+91 70037 68803</Link>
+              <Link to={whatsappContactLink} target={"_blank"} rel={"noreferrer noopener"}>+91 70037 68803</Link>
             </p>
           </div>
           <div className="Contact-Body-Right">
