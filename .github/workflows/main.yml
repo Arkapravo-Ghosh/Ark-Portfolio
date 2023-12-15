@@ -1,0 +1,148 @@
+name: "Deployment"
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  update-loc-badge:
+    name: Update Lines of Code Badge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Download cloc
+        run: |
+          sudo apt update
+          sudo apt install -y cloc
+      - name: Get the Numbers
+        run: |
+          echo CODE_LINES=$(cloc . --exclude-list-file=.clocignore | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
+      - name: Create Lines-of-Code-Badge
+        uses: schneegans/dynamic-badges-action@v1.6.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: ${{ vars.GIST_ID }}
+          filename: loc.json
+          label: Lines of Code
+          message: ${{ env.CODE_LINES }}
+          color: blue
+          forceUpdate: true
+  codeql-analysis:
+    name: CodeQL Analysis
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ "javascript" ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{matrix.language}}"
+  deploy-to-gh-pages:
+    needs: [codeql-analysis]
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Configure git
+        run: |
+          git config --global user.name '${{ github.repository_owner }}'
+          git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode | gpg --import
+          git config --global user.signingkey ${{ secrets.GPG_KEY_ID }}
+          git config --global commit.gpgsign true
+      - name: Deploy to gh-pages
+        run: |
+          npm run build-for-gh-pages
+          git clone https://github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io.git
+          rm -rf ./${{ github.repository_owner }}.github.io/*
+          cp -r Ark-Portfolio/* ./${{ github.repository_owner }}.github.io/
+          cp docs/PAGES_README.md ./${{ github.repository_owner }}.github.io/README.md
+          cp docs/PAGES_CNAME ./${{ github.repository_owner }}.github.io/CNAME
+          cd ./${{ github.repository_owner }}.github.io/
+          git remote remove origin
+          git remote add origin https://${{ secrets.PRIVATE_TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Deploy to GitHub Pages"
+          git push --set-upstream origin main
+#  deploy-to-server:
+#    needs: [ codeql-analysis ]
+#    name: Deploy to Server
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#      - name: Setup Node.js
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 18
+#      - name: Install dependencies
+#        run: npm ci
+#      - name: Build
+#        run: npm run build-for-server
+#      - name: Setup SSH
+#        run: |
+#          mkdir -p ~/.ssh/
+#          echo "${{ secrets.SERVER_SSH_KEY }}" | base64 --decode > ~/.ssh/id_rsa
+#          chmod 600 ~/.ssh/id_rsa
+#          ssh-keyscan -t rsa ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+#      - name: Deploy to Server
+#        run: |
+#          ssh -i ~/.ssh/id_rsa ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "rm -rf public_html/Ark-Portfolio/*"
+#          scp -r Ark-Portfolio/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:public_html/Ark-Portfolio/
+  publish-docker-image:
+    needs: [ codeql-analysis ]
+    name: Publish Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: set lower case owner name
+        run: |
+          echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
+        env:
+          OWNER: "${{ github.repository_owner }}"
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ env.OWNER_LC }}
+          password: ${{ secrets.GHCR_PAT }}
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          registry: docker.io
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PAT }}
+      - name: Build and Push Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/${{ env.OWNER_LC }}/ark-portfolio:latest, docker.io/${{ vars.DOCKERHUB_USERNAME }}/ark-portfolio:latest
+        env:
+          BUILDX_NO_DEFAULT_ATTESTATIONS: 1

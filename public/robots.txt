@@ -1,0 +1,11 @@
+User-agent: *
+
+Allow: /
+
+Allow: /about
+
+Allow: /contact
+
+Allow: /portfolio
+
+Sitemap: https://ark.ark-tech.in/sitemap.xml

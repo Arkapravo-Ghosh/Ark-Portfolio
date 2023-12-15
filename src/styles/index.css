@@ -1,0 +1,41 @@
+html {
+  --pointer: url("../assets/cursor/pointer.png") 12 7, auto;
+  --normal: url("../assets/cursor/normal.png") 4 11, auto;
+  --text-select: url("../assets/cursor/text-select.png") 12 8, auto;
+  /*
+  --pointer: pointer;
+  --normal: default;
+  --text-select: text;
+  */
+  cursor: var(--normal);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection {
+  background: rgb(39, 226, 255);
+  color: black;
+}
+
+:root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    height: 100vh;
+  }
+}

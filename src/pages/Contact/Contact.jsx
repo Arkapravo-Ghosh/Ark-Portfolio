@@ -1,0 +1,55 @@
+import React /* , { useState } */ from "react";
+import "./Contact.css";
+import { Link } from "react-router-dom";
+
+export default function Contact() {
+  const whatsappContactLink = "https://wa.me/917003768803";
+  function form_submit(event) {
+    event.preventDefault()
+    const mail = "arkapravoghosh99@gmail.com"
+    const form = document.getElementById("contact-form")
+    const user_name = form.elements["user_name"].value
+    const user_email = form.elements["user_email"].value
+    const message = form.elements["message"].value
+    window.open(`mailto:${mail}?subject=Message from ${user_name} (${user_email})&body=${message}`)
+    form.reset();
+  };
+
+  return (
+    <>
+      <div className="bg" />
+      <div className="Contact">
+        <div className="Contact-Header">
+          <h1>Contact Me</h1>
+        </div>
+        <div className="Contact-Body">
+          <div className="Contact-Body-Left">
+            <h2>Contact</h2>
+            <p>
+              <b>Email:</b>{" "}
+              <Link href="mailto:arkapravoghosh99@gmail.com" target={"_blank"} rel={"noreferrer noopener"}>arkapravoghosh99@gmail.com</Link>
+            </p>
+            <p>
+              <b>Phone:</b>{" "}
+              <Link to="tel:+917003768803" target={"_blank"} rel={"noreferrer noopener"}>+91 70037 68803</Link>
+            </p>
+            <p>
+              <b>WhatsApp:</b>{" "}
+              <Link to={whatsappContactLink} target={"_blank"} rel={"noreferrer noopener"}>+91 70037 68803</Link>
+            </p>
+          </div>
+          <div className="Contact-Body-Right">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" onSubmit={form_submit}>
+              <input type="hidden" name="contact_number" />
+              <input type="text" placeholder="Name" name="user_name" />
+              <input type="email" placeholder="Email" name="user_email" />
+              <textarea placeholder="Message" name="message" />
+              <input className="button disable-select" type="submit" value="Send" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
