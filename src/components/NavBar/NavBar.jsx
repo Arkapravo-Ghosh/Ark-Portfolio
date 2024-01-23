@@ -6,7 +6,7 @@ import logo from "/Ark_Logo.svg";
 import NavLinks from "./NavLinks";
 import { PiBriefcase } from "react-icons/pi";
 
-const resume_link = "https://raw.githubusercontent.com/Arkapravo-Ghosh/ark-resume/main/Arkapravo_Ghosh_Resume.pdf";
+const resume_link = "https://ark.ark-tech.in/ark-resume/Arkapravo_Ghosh_Resume.pdf";
 
 const textHover = {
   type: "spring",
@@ -63,7 +63,7 @@ export default function NavBar() {
       <AnimatePresence>
         <div className="navbar">
           <div className="logo disable-select">
-            <Link className="ResumeMobile" to={resume_link} type="application/pdf">
+            <Link className="ResumeMobile" to={resume_link} target="_blank">
               <PiBriefcase className="ResumeIcon" />
             </Link>
             <NavLink to="/">
@@ -88,7 +88,7 @@ export default function NavBar() {
             </ul>
           </div>
           <div className="heading disable-select">
-            <Link className="Resume" to={resume_link} type="application/pdf">
+            <Link className="Resume" to={resume_link} target="_blank">
               Resume
             </Link>
             <NavLink className="Heading" to="/">
