@@ -6,7 +6,7 @@ import logo from "/Ark_Logo.svg";
 import NavLinks from "./NavLinks";
 import { PiBriefcase } from "react-icons/pi";
 
-const resume_link = "https://ark.ark-tech.in/ark-resume/Arkapravo_Ghosh_Resume.pdf";
+const resume_link = "https://arkapravo.in/ark-resume/Arkapravo_Ghosh_Resume.pdf";
 
 const textHover = {
   type: "spring",
