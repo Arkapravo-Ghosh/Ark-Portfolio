@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Download cloc
         run: |
           sudo apt update
@@ -18,7 +18,7 @@ jobs:
         run: |
           echo CODE_LINES=$(cloc . --exclude-list-file=.clocignore | awk '/SUM:/ { gsub(/[^0-9.]/, "", $5); printf "%.1fk\n", $5/1000 }' | tr -d '\n') >> $GITHUB_ENV
       - name: Create Lines-of-Code-Badge
-        uses: schneegans/dynamic-badges-action@v1.6.0
+        uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: ${{ vars.GIST_ID }}
@@ -40,9 +40,9 @@ jobs:
         language: [ "javascript" ]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
       - name: Autobuild
@@ -57,9 +57,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Install dependencies
