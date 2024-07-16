@@ -1,7 +1,7 @@
 FROM node:18.16.0 as build
 WORKDIR /usr/app
 COPY . /usr/app
-RUN npm ci
+RUN npm i --legacy-peer-deps
 RUN npm run build
 FROM nginx:stable
 EXPOSE 80/tcp
