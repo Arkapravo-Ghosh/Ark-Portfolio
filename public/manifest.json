@@ -1,0 +1,31 @@
+{
+  "name": "Arkapravo Ghosh | Full Stack Developer & DevSecOps Engineer",
+  "short_name": "Arkapravo Ghosh",
+  "description": "Portfolio of Arkapravo Ghosh - Full Stack Developer & DevSecOps Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "technology", "development"]
+}
