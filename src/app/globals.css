@@ -119,11 +119,17 @@
   html {
     scroll-behavior: smooth;
     background-color: black;
+    overflow-x: hidden;
   }
   body {
     @apply bg-background text-foreground;
     background-color: black;
+    overflow-x: hidden;
   }
+}
+
+main {
+  overflow-x: hidden;
 }
 
 @keyframes star-movement-bottom {

@@ -55,7 +55,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
               href={testimonial.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-none cursor-target text-white font-semibold truncate block hover:text-cyan-400 transition-colors duration-200"
+              className="cursor-none cursor-target text-white font-semibold truncate block hover:text-cyan-400 transition-colors duration-200 w-fit"
             >
               {testimonial.name}
             </a>
