@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { navItems } from "@/configs/navigation";
 import { ExternalLink, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,13 +63,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - using # as href to avoid lint warning, actual navigation handled by onClick */}
-          <a
-            href="#intro"
+          <Link
+            href="/"
             onClick={(e) => handleNavClick(e, "/")}
             className="cursor-none cursor-target hover:opacity-80 transition-opacity"
           >
             <Image
-              src="/Ark_Logo.svg"
+              src="/Ark_Logo.png"
               alt="Arkapravo Ghosh - Portfolio Logo"
               width={40}
               height={40}
@@ -77,7 +78,7 @@ export default function Navbar() {
               sizes="40px"
               className="rounded-sm"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">

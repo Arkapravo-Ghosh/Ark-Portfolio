@@ -15,9 +15,9 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   const isLongContent = testimonial.content.length > CHARACTER_LIMIT;
 
   return (
-    <div className="cursor-none cursor-target p-6 bg-linear-to-br from-zinc-900 to-zinc-800 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 h-full flex flex-col">
-      <Quote className="w-10 h-10 text-cyan-500/50 mb-4 shrink-0" />
-      <div className="mb-6 grow">
+    <div className="cursor-none cursor-target p-4 sm:p-6 bg-linear-to-br from-zinc-900 to-zinc-800 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 h-full flex flex-col overflow-hidden">
+      <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-500/50 mb-4 shrink-0" />
+      <div className="mb-6 grow min-w-0">
         <div
           ref={contentRef}
           className="overflow-hidden transition-all duration-500 ease-in-out"
@@ -25,7 +25,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             maxHeight: isLongContent && !isExpanded ? "7.5em" : "none",
           }}
         >
-          <p className="text-gray-300 italic">
+          <p className="text-gray-300 italic wrap-break-word">
             &quot;{testimonial.content}&quot;
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function Testimonials() {
           </p>
         </AnimatedContent>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <AnimatedContent
               key={testimonial.id}
@@ -115,6 +115,7 @@ export default function Testimonials() {
               scale={0.95}
               threshold={0.1}
               delay={index * 0.1}
+              className="min-w-0"
             >
               <TestimonialCard testimonial={testimonial} />
             </AnimatedContent>

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build-for-gh-pages": "next build && cp out/_not-found.html out/404.html"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

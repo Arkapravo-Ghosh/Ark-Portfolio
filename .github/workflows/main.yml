@@ -1,0 +1,41 @@
+name: "Deployment"
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  deploy-to-gh-pages:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm i
+      - name: Configure git
+        run: |
+          git config --global user.name '${{ github.repository_owner }}'
+          git config --global user.email '${{ github.repository_owner }}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 --decode | gpg --import
+          git config --global user.signingkey ${{ secrets.GPG_KEY_ID }}
+          git config --global commit.gpgsign true
+      - name: Deploy to gh-pages
+        run: |
+          npm run build-for-gh-pages
+          git clone https://github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io.git
+          rm -rf ./${{ github.repository_owner }}.github.io/*
+          cp -r out/* ./${{ github.repository_owner }}.github.io/
+          cp docs/PAGES_README.md ./${{ github.repository_owner }}.github.io/README.md
+          cp docs/PAGES_CNAME ./${{ github.repository_owner }}.github.io/CNAME
+          touch ./${{ github.repository_owner }}.github.io/.nojekyll
+          cd ./${{ github.repository_owner }}.github.io/
+          git remote remove origin
+          git remote add origin https://${{ secrets.PRIVATE_TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Deploy to GitHub Pages"
+          git push --set-upstream origin main
