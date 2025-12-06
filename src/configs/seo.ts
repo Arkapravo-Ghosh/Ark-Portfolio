@@ -5,7 +5,7 @@ export const siteConfig = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
   description: `Portfolio of ${personalInfo.name} - ${personalInfo.title} specializing in React, Next.js, Node.js, Python, Docker, Kubernetes, and Cloud technologies. Based in ${personalInfo.location}.`,
   url: personalInfo.website,
-  ogImage: `${personalInfo.website}/og-image.png`,
+  ogImage: `${personalInfo.website}/thumbnail.png`,
   links: {
     github: "https://github.com/Arkapravo-Ghosh",
     linkedin: "https://www.linkedin.com/in/arkapravo-ghosh/",
