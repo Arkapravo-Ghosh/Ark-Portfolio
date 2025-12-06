@@ -12,7 +12,7 @@ type StarBorderProps<T extends React.ElementType> = React.ComponentPropsWithoutR
 const StarBorder = <T extends React.ElementType = 'button'>({
   as,
   className = '',
-  color = 'white',
+  color = 'cyan',
   speed = '6s',
   thickness = 1,
   children,
