@@ -2,48 +2,43 @@
 
 import { personalInfo } from "@/configs/personal";
 import { primarySocials } from "@/configs/socials";
-import FloatingLines from "@/components/FloatingLines";
+// Floating background removed per request
 import TargetCursor from "@/components/TargetCursor";
 import BlurText from "@/components/BlurText";
 import DecryptedText from "@/components/DecryptedText";
 import AnimatedContent from "@/components/AnimatedContent";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LinkedInIcon } from "@/components/icons";
+import DarkVeil from "@/components/DarkVeil";
 
 export default function Hero() {
   return (
     <section
       id="intro"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* TargetCursor - follows mouse and locks onto interactive elements */}
-      <TargetCursor
-        targetSelector=".cursor-target"
-        spinDuration={2}
-        hideDefaultCursor={true}
-        hoverDuration={0.2}
-        parallaxOn={true}
-      />
 
-      {/* FloatingLines Background */}
-      <div className="absolute inset-0 z-0">
-        <FloatingLines
-          linesGradient={["#00FFFF", "#06B6D4", "#0EA5E9", "#22D3EE"]}
-          enabledWaves={["top", "middle", "bottom"]}
-          lineCount={[4, 6, 4]}
-          lineDistance={[8, 6, 8]}
-          animationSpeed={0.5}
-          interactive={true}
-          bendRadius={6}
-          bendStrength={-0.4}
-          parallax={true}
-          parallaxStrength={0.15}
-          mixBlendMode="screen"
+        {/* DarkVeil background - visually behind content, adapts to theme */}
+        <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+          <DarkVeil
+            hueShift={50} // attempt blue/cyan accent
+            noiseIntensity={0.10}
+            scanlineIntensity={0.14}
+            speed={0.6}
+            scanlineFrequency={2.5}
+            warpAmount={0.05}
+            resolutionScale={1}
+          />
+        </div>
+
+        {/* TargetCursor - follows mouse and locks onto interactive elements */}
+        <TargetCursor
+          targetSelector=".cursor-target"
+          spinDuration={2}
+          hideDefaultCursor={true}
+          hoverDuration={0.2}
+          parallaxOn={true}
         />
-      </div>
-
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 z-1 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
