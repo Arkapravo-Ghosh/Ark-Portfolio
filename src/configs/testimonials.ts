@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
     company: "University of Engineering & Management",
     image: "/apurbanandi.jpeg",
     content:
-      "I highly recommend Arkapravo as a dedicated and talented student researcher. He has strong technical proficiency in both frontend and backend development, along with a solid understanding of system-level concepts. Arkapravo actively contributed to multiple projects at the IEDC Lab and played a key role as a development team member in the HPC project “Satyameba.” His curiosity, problem-solving ability, and commitment to research-driven innovation make him a valuable asset to any technical or research-oriented team.",
+      "I highly recommend Arkapravo as a dedicated and talented student researcher. He has strong technical proficiency in both frontend and backend development, along with a solid understanding of system-level concepts. Arkapravo actively contributed to multiple projects at the IEDC Lab and played a key role as a development team member in the HPC project \"Satyameba.\" His curiosity, problem-solving ability, and commitment to research-driven innovation make him a valuable asset to any technical or research-oriented team.",
     linkedinUrl: "https://www.linkedin.com/in/apurba-nandi-8b63b2174",
   },
   {
