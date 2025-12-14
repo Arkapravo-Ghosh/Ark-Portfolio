@@ -11,6 +11,16 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: "1",
+    name: "Apurba Nandi",
+    role: "Assistant Professor",
+    company: "University of Engineering & Management",
+    image: "/apurbanandi.jpeg",
+    content:
+      "I highly recommend Arkapravo as a dedicated and talented student researcher. He has strong technical proficiency in both frontend and backend development, along with a solid understanding of system-level concepts. Arkapravo actively contributed to multiple projects at the IEDC Lab and played a key role as a development team member in the HPC project “Satyameba.” His curiosity, problem-solving ability, and commitment to research-driven innovation make him a valuable asset to any technical or research-oriented team.",
+    linkedinUrl: "https://www.linkedin.com/in/apurba-nandi-8b63b2174",
+  },
+  {
+    id: "2",
     name: "Subhajit Hait",
     role: "Software Developer",
     company: "Avinya NeuroTech",
@@ -20,7 +30,7 @@ export const testimonials: Testimonial[] = [
     linkedinUrl: "https://www.linkedin.com/in/subho004",
   },
   {
-    id: "2",
+    id: "3",
     name: "Soumyadip Ghosal",
     role: "Founder & CEO",
     company: "RevMaxx",
@@ -30,17 +40,17 @@ export const testimonials: Testimonial[] = [
     linkedinUrl: "https://www.linkedin.com/in/soumyadip-ghosal-820660126",
   },
   {
-    id: "3",
+    id: "4",
     name: "Aishwarya Barik",
-    role: "Your friendly neighborhood tech guy",
-    company: "RevMaxx",
+    role: "Technical Lead",
+    company: "Heva AI",
     image: "/aishwaryabarik.jpeg",
     content:
       "I had the pleasure of working with Arkapravo at RevMaxx. His technical expertise, problem-solving skills, and collaborative spirit were truly impressive. He consistently delivered innovative solutions and contributed significantly to our team's success.",
     linkedinUrl: "https://www.linkedin.com/in/aishwarya-barik-221324192",
   },
   {
-    id: "4",
+    id: "5",
     name: "Saptarshi Basu",
     role: "Product Designer",
     company: "Spicenet",
@@ -50,7 +60,7 @@ export const testimonials: Testimonial[] = [
     linkedinUrl: "https://www.linkedin.com/in/saptarshibasu15",
   },
   {
-    id: "5",
+    id: "6",
     name: "Prasun Das",
     role: "Software Engineer - II (Full Stack & DevOps)",
     company: "Phlo Systems Ltd.",
