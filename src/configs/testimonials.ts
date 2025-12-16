@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     id: "1",
     name: "Apurba Nandi",
     role: "Assistant Professor",
-    company: "University of Engineering & Management",
+    company: "University of Engineering & Management, Kolkata",
     image: "/apurbanandi.jpeg",
     content:
       "I highly recommend Arkapravo as a dedicated and talented student researcher. He has strong technical proficiency in both frontend and backend development, along with a solid understanding of system-level concepts. Arkapravo actively contributed to multiple projects at the IEDC Lab and played a key role as a development team member in the HPC project \"Satyameba.\" His curiosity, problem-solving ability, and commitment to research-driven innovation make him a valuable asset to any technical or research-oriented team.",
@@ -51,6 +51,15 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "5",
+    name: "Avik Kumar Das",
+    role: "Faculty",
+    company: "University of Engineering & Management, Kolkata",
+    image: "/avikkumardas.jpeg",
+    content: "A sincere and dedicated learner with a strong willingness to improve and grow professionally.",
+    linkedinUrl: "https://www.linkedin.com/in/avikdasetc",
+  },
+  {
+    id: "6",
     name: "Saptarshi Basu",
     role: "Product Designer",
     company: "Spicenet",
@@ -60,7 +69,7 @@ export const testimonials: Testimonial[] = [
     linkedinUrl: "https://www.linkedin.com/in/saptarshibasu15",
   },
   {
-    id: "6",
+    id: "7",
     name: "Prasun Das",
     role: "Software Engineer - II (Full Stack & DevOps)",
     company: "Phlo Systems Ltd.",
