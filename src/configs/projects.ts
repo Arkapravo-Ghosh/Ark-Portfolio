@@ -47,6 +47,26 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "simple-mailer",
+    title: "Simple Mailer",
+    description:
+      "Minimal mailing-list manager that stores recipients, generates HTML email messages, and sends broadcasts via SMTP.",
+    longDescription:
+      "Express + TypeScript API with protected mailing-list endpoints (API key) and public unsubscribe links backed by per-recipient UUIDs; supports fire-and-forget broadcast sending and Dockerized deployment.",
+    technologies: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "Nodemailer",
+      "SMTP",
+      "Docker",
+    ],
+    githubUrl: "https://github.com/Arkapravo-Ghosh/Simple-Mailer",
+    featured: true,
+  },
+  {
     id: "satyameba",
     title: "SATYAMEBA — HPC / Supercomputer Cluster",
     description:
