@@ -32,6 +32,21 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "traintrack",
+    title: "TrainTrack",
+    description:
+      "FastAPI service that fetches Indian Railways train running status from National Train Enquiry System (NTES) and converts upstream data into a clean JSON response.",
+    longDescription:
+      "Lightweight API wrapper with best-effort parsing for Arrived/Departed events (station, code, timestamps, delay) and optional time-window filtering; includes interactive Swagger docs.",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Web Scraping",
+    ],
+    githubUrl: "https://github.com/Arkapravo-Ghosh/TrainTrack",
+    featured: true,
+  },
+  {
     id: "satyameba",
     title: "SATYAMEBA — HPC / Supercomputer Cluster",
     description:

@@ -13,6 +13,29 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "wiyse",
+    role: "Software Development Engineer",
+    company: "Wiyse",
+    type: "Full-Time",
+    location: "Remote",
+    startDate: "Dec 2025",
+    endDate: "Present",
+    description: [
+      "Contributing to the development of projects using React, TypeScript, and Next.js for frontend development and FastAPI with SQLAlchemy for backend services",
+      "Collaborating with cross-functional teams to design, develop, and deploy scalable web applications",
+      "Implementing new features and optimizing existing functionalities to enhance user experience and performance",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Python",
+      "FastAPI",
+    ],
+  },
+  {
     id: "iedc-intern",
     role: "Research And Development Intern (DevOps)",
     company: "Innovation and Entrepreneurship Development Cell (Dept. of CSE IoT, CS & BT), UEM, Kolkata",
