@@ -223,7 +223,7 @@ export const volunteering = [
     role: "DevOps & Cloud Lead",
     organization: "GDG UEM Kolkata",
     startDate: "Oct 2024",
-    endDate: "Present",
+    endDate: "Oct 2025",
     description: "Leading DevOps and Cloud initiatives and organizing tech events",
   },
   {
@@ -249,7 +249,7 @@ export const volunteering = [
     role: "Web Developer",
     organization: "Ureckon, UEM Kolkata",
     startDate: "Dec 2023",
-    endDate: "Present",
+    endDate: "Feb 2024",
     description:
       "Built the Website of Ureckon 2024 (U6) and Building the Website of Ureckathon 2024 as a part of the Dev Team",
   },
