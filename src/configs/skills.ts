@@ -46,6 +46,7 @@ export const skillCategories: SkillCategory[] = [
       "Networking",
       "Jenkins",
       "Kubernetes",
+      "Argo CD",
       "Grafana",
       "Prometheus",
       "Ansible",
