@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     type: "Full-Time",
     location: "Remote",
     startDate: "Dec 2025",
-    endDate: "Present",
+    endDate: "Mar 2026",
     description: [
       "Delivered features across 5+ production modules using React/Next.js + TypeScript and FastAPI/SQLAlchemy, improving release velocity through close cross-functional collaboration.",
       "Implemented new features and optimizing existing functionalities to enhance user experience and performance.",
