@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "rootDir": "..",
+    "outDir": "./build",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "./**/*.ts",
+    "../src/configs/**/*.ts"
+  ],
+  "exclude": [
+    "./build",
+    "../node_modules"
+  ]
+}
