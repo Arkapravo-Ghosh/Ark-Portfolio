@@ -14,6 +14,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "splitty",
+    title: "Splitty",
+    description:
+      "A lightweight, no-frills web app for tracking shared expenses in a group and figuring out the simplest way to settle up. Made for trips, flatmates, friend groups, and families who'd rather spend less time on math and more time together.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Shadcn UI",
+      "Drizzle ORM",
+    ],
+    liveUrl: "https://splitty.arkapravo.in",
+    featured: true,
+  },
+  {
     id: "totalscribe",
     title: "TotalScribe",
     description:

@@ -3,7 +3,7 @@ export interface Experience {
   role: string;
   company: string;
   companyUrl?: string;
-  type: "Full-Time" | "Part-Time" | "Internship" | "Freelance" | "Contract";
+  type: "Freelance" | "Part-Time" | "Internship" | "Freelance" | "Contract";
   location: string;
   startDate: string;
   endDate: string | "Present";
@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     id: "wiyse",
     role: "DevOps Engineer",
     company: "Wiyse",
-    type: "Full-Time",
+    type: "Freelance",
     location: "Remote",
     startDate: "Nov 2025",
     endDate: "Mar 2026",
@@ -68,7 +68,7 @@ export const experiences: Experience[] = [
     id: "goodfit",
     role: "Junior Software Engineer",
     company: "Goodfit",
-    type: "Full-Time",
+    type: "Freelance",
     location: "Remote",
     startDate: "Aug 2025",
     endDate: "Sep 2025",
@@ -89,7 +89,7 @@ export const experiences: Experience[] = [
     id: "predictgrowth",
     role: "Software Development Engineer",
     company: "PredictGrowth",
-    type: "Full-Time",
+    type: "Freelance",
     location: "Remote",
     startDate: "May 2025",
     endDate: "Aug 2025",
