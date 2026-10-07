@@ -3,7 +3,7 @@
 import { personalInfo } from "@/configs/personal";
 import { socials } from "@/configs/socials";
 import AnimatedContent from "@/components/AnimatedContent";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 import { SiGithub, SiX, SiInstagram, SiFacebook } from "@icons-pack/react-simple-icons";
 import { LinkedInIcon } from "@/components/icons";
 
@@ -36,10 +36,19 @@ export default function Footer() {
             <h3 className="text-3xl font-bold text-white mb-4">
               Let&apos;s Connect
             </h3>
-            <p className="text-gray-400 max-w-md mx-auto">
+            <p className="text-gray-400 max-w-md mx-auto mb-6">
               I&apos;m always open to discussing new projects, creative ideas,
               or opportunities to be part of your vision.
             </p>
+            <a
+              href={personalInfo.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-none cursor-target inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-600/20"
+            >
+              <Calendar className="w-4 h-4" />
+              Schedule a Call
+            </a>
           </div>
         </AnimatedContent>
 

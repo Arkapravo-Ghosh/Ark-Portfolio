@@ -6,6 +6,7 @@ export const personalInfo = {
   location: "Kolkata, West Bengal, India",
   website: "https://arkapravo.in",
   resumeUrl: "https://arkapravo.in/ark-resume/Arkapravo_Ghosh_Resume.pdf",
+  appointmentUrl: "https://calendar.app.google/ZWVswz4724KLxwho9",
   avatar: "/photo.jpeg",
   bio: `I'm a passionate Full Stack Developer and DevSecOps Engineer with expertise in building scalable web applications and secure cloud infrastructure. Currently pursuing B.Tech in Computer Science with specializations in IoT, Cybersecurity, and Blockchain. I love working with modern technologies and contributing to open-source projects.`,
   highlights: [

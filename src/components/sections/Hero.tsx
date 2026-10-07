@@ -9,6 +9,7 @@ import DecryptedText from "@/components/DecryptedText";
 import AnimatedContent from "@/components/AnimatedContent";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LinkedInIcon } from "@/components/icons";
+import { Calendar } from "lucide-react";
 import DarkVeil from "@/components/DarkVeil";
 
 export default function Hero() {
@@ -101,7 +102,7 @@ export default function Hero() {
           scale={1}
           threshold={0.1}
         >
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="flex items-center justify-center gap-4 mb-12 flex-wrap">
             {primarySocials.map((social) => (
               <a
                 key={social.id}
@@ -125,6 +126,15 @@ export default function Hero() {
               className="cursor-none cursor-target px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105"
             >
               View Resume
+            </a>
+            <a
+              href={personalInfo.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-none cursor-target inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-cyan-500/50 text-white rounded-full font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Calendar className="w-4 h-4 text-cyan-400" />
+              Book a Call
             </a>
           </div>
         </AnimatedContent>
