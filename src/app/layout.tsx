@@ -94,6 +94,9 @@ export const metadata: Metadata = {
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
+  other: {
+    "google-adsense-account": "ca-pub-6444307069002861",
+  },
   category: "technology",
 };
 
