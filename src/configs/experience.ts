@@ -3,7 +3,7 @@ export interface Experience {
   role: string;
   company: string;
   companyUrl?: string;
-  type: "Freelance" | "Part-Time" | "Internship" | "Freelance" | "Contract";
+  type: "Full-Time" | "Part-Time" | "Internship" | "Freelance" | "Contract";
   location: string;
   startDate: string;
   endDate: string | "Present";
@@ -13,32 +13,46 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "forge-it-systems",
+    role: "Full Stack Developer",
+    company: "Forge IT Systems",
+    type: "Freelance",
+    location: "Remote",
+    startDate: "Apr 2026",
+    endDate: "Present",
+    description: [
+      "Cross-Platform Delivery: Shipped React Native apps for iOS and Android from a shared codebase, enabling feature delivery across both platforms.",
+      "AI Workflow Automation: Built voice agents and AI-powered features, enabling speech-based interactions and automating user workflows.",
+      "End-to-End Ownership: Delivered 3 client projects, owning frontend, backend, deployment, and ongoing maintenance.",
+    ],
+    technologies: [
+      "React Native",
+      "iOS",
+      "Android",
+      "Voice AI",
+      "Full-Stack Development",
+    ],
+  },
+  {
     id: "wiyse",
     role: "DevOps Engineer",
     company: "Wiyse",
-    type: "Freelance",
+    type: "Full-Time",
     location: "Remote",
     startDate: "Nov 2025",
     endDate: "Mar 2026",
     description: [
-      "Delivered features across 5+ production modules using React/Next.js + TypeScript and FastAPI/SQLAlchemy, improving release velocity through close cross-functional collaboration.",
-      "Implemented new features and optimizing existing functionalities to enhance user experience and performance.",
-      "Set up autoscaling microservices with zero-downtime deployments and auto-recovery on AWS EKS using ArgoCD and ECR.",
+      "Release Reliability: Achieved zero-downtime releases across 100% of services by containerizing workloads and orchestrating autoscaling deployments on AWS EKS with ArgoCD and ECR.",
+      "Developer Productivity: Eliminated manual deployments across 100% of services with CI/CD and pre-deployment test gates, enabling independent releases while blocking failed builds before production.",
+      "Production Observability: Added 2 real-time alert categories for services and deployments, shortening failure detection and recovery across Kubernetes workloads.",
     ],
     technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "Python",
-      "FastAPI",
       "AWS",
       "Docker",
-      "Docker Compose",
       "Kubernetes",
       "Argo CD",
+      "ECR",
+      "CI/CD",
     ],
   },
   {
@@ -113,13 +127,13 @@ export const experiences: Experience[] = [
     role: "Software Development Engineer",
     company: "RevMaxx",
     type: "Part-Time",
-    location: "On-site",
+    location: "Hybrid",
     startDate: "Feb 2024",
     endDate: "May 2025",
     description: [
-      "Designed backend architecture (auth, billing, onboarding) supporting 120% user growth and onboarding 5 enterprise clients; authored ~40% of core services",
-      "Improved API and streaming performance 30% via indexing, query refactors, and WebSocket batching (–22% server CPU)",
-      "Implemented authentication and RBAC (100% of protected endpoints) and reduced high/critical dependency vulnerabilities 80%",
+      "Enterprise Impact: Enabled a $100K enterprise contract by partnering directly with the client's engineering team to integrate RevMaxx into its application through the Enterprise API.",
+      "Scalable Platform: Single-handedly built authentication, billing, onboarding, and RBAC services supporting 120% user growth; improved API/streaming performance 30% and cut CPU usage 22% through indexing and batching.",
+      "AI Workflow Automation: Automated 3 clinical stages using LangChain, OpenAI Whisper, and RAG: speech transcription, documentation, and medical-code retrieval.",
     ],
     technologies: [
       "TypeScript",
@@ -127,6 +141,9 @@ export const experiences: Experience[] = [
       "Node.js",
       "WebSocket",
       "MariaDB",
+      "LangChain",
+      "OpenAI Whisper",
+      "RAG",
     ],
   },
   {

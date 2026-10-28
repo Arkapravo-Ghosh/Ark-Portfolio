@@ -21,7 +21,7 @@ export const education: Education[] = [
     location: "Kolkata, West Bengal, India",
     startYear: 2022,
     endYear: 2026,
-    gpa: "7.44",
+    gpa: "7.45",
     specializations: ["IoT", "Cybersecurity", "Blockchain"],
     achievements: [
       "Active member of technical clubs and communities",
