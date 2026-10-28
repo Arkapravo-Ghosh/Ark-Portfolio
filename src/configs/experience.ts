@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     company: "Forge IT Systems",
     type: "Freelance",
     location: "Remote",
-    startDate: "Apr 2026",
+    startDate: "Mar 2026",
     endDate: "Present",
     description: [
       "Cross-Platform Delivery: Shipped React Native apps for iOS and Android from a shared codebase, enabling feature delivery across both platforms.",
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     company: "Wiyse",
     type: "Full-Time",
     location: "Remote",
-    startDate: "Nov 2025",
+    startDate: "May 2025",
     endDate: "Mar 2026",
     description: [
       "Release Reliability: Achieved zero-downtime releases across 100% of services by containerizing workloads and orchestrating autoscaling deployments on AWS EKS with ArgoCD and ECR.",
