@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Arkapravo Ghosh",
   title: "Full Stack Developer & DevSecOps Engineer",
   tagline: "Talk is cheap, show me the code.",
-  email: "arkapravoghosh0@gmail.com",
+  email: "arkapravoghosh99@gmail.com",
   location: "Bengaluru, Karnataka, India",
   website: "https://arkapravo.in",
   resumeUrl: "https://arkapravo.in/ark-resume/Arkapravo_Ghosh_Resume.pdf",
